@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
      <h1>Should I automate</h1>
-     <div className="container">YO</div>
+     <div className="container"></div>
       </div>
     
 
