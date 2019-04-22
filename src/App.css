@@ -1,8 +1,8 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-header {
+/* .App-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,18 +10,44 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+body {
+  width:90%;
+  margin:0px auto;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.container {
+/* .row {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  width:90%;
-  margin:0px auto;
-  background-color: red
+  flex-direction:row;
+  background-color: peachpuff
+} */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around
+}
+
+.form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
