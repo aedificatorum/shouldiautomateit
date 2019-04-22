@@ -16,13 +16,34 @@ class App extends Component {
             <label for="times-month">Times per month</label>
             <input type="text" id="times-month" placeholder="Time in minutes" />
           </form>
-          <table>
+          <table id="frequency-helper">
             <tr>
-              <th>test</th>
+              <th>Frequency</th>
+              <th>Per Month</th>
             </tr>
+            <tr>
+              <td>Monthly</td>
+              <td>1</td>
+              </tr>
+              <tr>
+                <td>Weekly</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Daily(week)</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>2x Daily(week)</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td>8x Daily(week)</td>
+                <td>160</td>
+              </tr>
+
+           
           </table>
-          {/* <div className="row">
-        </div> */}
       </div>
       </div>
     );
