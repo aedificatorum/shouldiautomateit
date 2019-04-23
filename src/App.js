@@ -9,42 +9,44 @@ class App extends Component {
 
         <div className="row">
           <form className="form">
-            <label for="automate-time">Time to automate</label>
-            <input type="text" id="automate-time" placeholder="Time in minutes" />
-            <label for="complete-time">Time to complete</label>
-            <input type="text" id="complete-time" placeholder="Time in minutes" />
-            <label for="times-month">Times per month</label>
-            <input type="text" id="times-month" placeholder="Time in minutes" />
+            <div className="row">
+              <label for="automate-time">Time to complete manually</label>
+              </div>
+              <div className="row">
+              <label for="automate-time">Frequency</label>
+              <input
+                type="number"
+                id="automate-time"
+                placeholder="Frequency"
+              />
+            <label for="automate-time">Frequency</label>
+            <select type="text" id="unit">
+              <option value="days">Day</option>
+              <option value="week">Week</option>
+              <option value="two-week">Biweekly</option>
+              <option value="month">Month</option>
+            </select>
+            </div>
+          
+            <div className="row">
+              <label for="complete-time">Time to automate</label>
+              <input
+                type="text"
+                id="complete-time"
+                placeholder="Time in minutes"
+              />
+            </div>
+            <div className="row">
+              <label for="times-month">Times per month</label>
+              <input
+                type="text"
+                id="times-month"
+                placeholder="Time in minutes"
+              />
+            </div>
           </form>
-          <table id="frequency-helper">
-            <tr>
-              <th>Frequency</th>
-              <th>Per Month</th>
-            </tr>
-            <tr>
-              <td>Monthly</td>
-              <td>1</td>
-              </tr>
-              <tr>
-                <td>Weekly</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>Daily(week)</td>
-                <td>20</td>
-              </tr>
-              <tr>
-                <td>2x Daily(week)</td>
-                <td>40</td>
-              </tr>
-              <tr>
-                <td>8x Daily(week)</td>
-                <td>160</td>
-              </tr>
-
-           
-          </table>
-      </div>
+          
+        </div>
       </div>
     );
   }
