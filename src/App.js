@@ -7,6 +7,7 @@ class App extends Component {
     this.state = {
       frequency: 0,
       unit: "",
+      duration: 0,
       automationTime: 0
     };
   }
@@ -19,11 +20,16 @@ class App extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({
-      frequency: 0,
-      unit: '',
-      automationTime: 0
-    })
+    let numberOfTimesPerMonth = 0;
+    if (this.state.unit === "" || this.state.unit === "everyday") {
+      numberOfTimesPerMonth = this.state.frequency * 4
+      console.log(numberOfTimesPerMonth)
+    } else if (this.state.unit === "biWeekly") {
+      numberOfTimesPerMonth = this.state.frequency * 2
+    } else {
+      numberOfTimesPerMonth = this.state.frequency
+    }
+    console.log('hey in Submit', this.state.frequency)
   };
 
   
@@ -43,24 +49,32 @@ class App extends Component {
               <label htmlFor="automate-time">Frequency</label>
               <input
                 type="number"
-                id="automate-time"
+                id="frequency"
                 placeholder="Frequency"
                 onChange={this.handleChange}
               />
-              <label htmlFor="automate-time">Frequency</label>
-              <select type="text" id="unit" onChange={this.handleChange}>
-                <option value="days">Day</option>
+              <label htmlFor="automate-time">per</label>
+              <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
+                <option value="everyday">Everyday</option>
+                <option value="businessDay">Every week day</option>
                 <option value="week">Week</option>
-                <option value="two-week">Biweekly</option>
+                <option value="biWeekly">Biweekly</option>
                 <option value="month">Month</option>
               </select>
+              <label htmlFor="automate-time">Duration</label>
+              <input
+                type="number"
+                id="duration"
+                placeholder="Duration"
+                onChange={this.handleChange}
+              />
             </div>
 
             <div className="row">
               <label htmlFor="complete-time">Time to automate</label>
               <input
                 type="text"
-                id="complete-time"
+                id="automationTime"
                 placeholder="Time in minutes"
                 onChange={this.handleChange}
               />
