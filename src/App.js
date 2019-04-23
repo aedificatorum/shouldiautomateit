@@ -3,27 +3,26 @@ import "./App.css";
 
 class App extends Component {
   constructor() {
-    super() 
+    super();
     this.state = {
       frequency: 0,
-      unit: '',
+      unit: "",
       automationTime: 0
-    }
+    };
   }
 
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    })
-  }
+    });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
-    // this.setState = (this.state)
-  }
+  };
 
   render() {
-    console.log(this.state)
+    console.log(this.state);
     return (
       <div>
         <h1>Should I automate</h1>
@@ -32,8 +31,8 @@ class App extends Component {
           <form className="form" onSubmit={this.handleSubmit}>
             <div className="row">
               <label htmlFor="automate-time">Time to complete manually</label>
-              </div>
-              <div className="row">
+            </div>
+            <div className="row">
               <label htmlFor="automate-time">Frequency</label>
               <input
                 type="number"
@@ -41,15 +40,15 @@ class App extends Component {
                 placeholder="Frequency"
                 onChange={this.handleChange}
               />
-            <label htmlFor="automate-time">Frequency</label>
-            <select type="text" id="unit" onChange={this.handleChange}>
-              <option value="days">Day</option>
-              <option value="week">Week</option>
-              <option value="two-week">Biweekly</option>
-              <option value="month">Month</option>
-            </select>
+              <label htmlFor="automate-time">Frequency</label>
+              <select type="text" id="unit" onChange={this.handleChange}>
+                <option value="days">Day</option>
+                <option value="week">Week</option>
+                <option value="two-week">Biweekly</option>
+                <option value="month">Month</option>
+              </select>
             </div>
-          
+
             <div className="row">
               <label htmlFor="complete-time">Time to automate</label>
               <input
@@ -68,11 +67,10 @@ class App extends Component {
               />
             </div>
             <button className="row" type="submit">
-                  Submit
-                </button>
+              Submit
+            </button>
           </form>
         </div>
-
       </div>
     );
   }
