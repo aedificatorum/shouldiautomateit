@@ -19,10 +19,17 @@ class App extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.setState({
+      frequency: 0,
+      unit: '',
+      automationTime: 0
+    })
   };
 
+  
   render() {
     console.log(this.state);
+    console.log(this.props)
     return (
       <div>
         <h1>Should I automate</h1>
@@ -58,14 +65,7 @@ class App extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className="row">
-              <label htmlFor="times-month">Times per month</label>
-              <input
-                type="text"
-                id="times-month"
-                placeholder="Time in minutes"
-              />
-            </div>
+            
             <button className="row" type="submit">
               Submit
             </button>
