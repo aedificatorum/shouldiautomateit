@@ -22,8 +22,12 @@ class App extends Component {
     event.preventDefault();
     let numberOfTimesPerMonth = 0;
     if (this.state.unit === "" || this.state.unit === "everyday") {
-      numberOfTimesPerMonth = this.state.frequency * 4
+      numberOfTimesPerMonth = this.state.frequency * 30
       console.log(numberOfTimesPerMonth)
+    } else if (this.state.unit === "businessDay") {
+      numberOfTimesPerMonth = this.state.frequency * 20
+    } else if (this.state.unit === "week") {
+      numberOfTimesPerMonth = this.state.frequency * 4
     } else if (this.state.unit === "biWeekly") {
       numberOfTimesPerMonth = this.state.frequency * 2
     } else {
