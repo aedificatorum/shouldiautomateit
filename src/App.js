@@ -46,42 +46,40 @@ class App extends Component {
 
         <div className="row">
           <form className="form" onSubmit={this.handleSubmit}>
-            <div className="row">
-              <label htmlFor="automate-time">Time to complete manually</label>
-            </div>
-            <div className="row">
-              <label htmlFor="automate-time">Frequency</label>
               <input
                 type="number"
                 id="frequency"
-                placeholder="Frequency"
+                placeholder="1,2,3"
                 onChange={this.handleChange}
               />
-              <label htmlFor="automate-time">per</label>
+              <span> time every </span>
               <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
-                <option value="everyday">Everyday</option>
-                <option value="businessDay">Every week day</option>
+                <option value="everyday">day</option>
+                <option value="businessDay">week day</option>
                 <option value="week">Week</option>
-                <option value="biWeekly">Biweekly</option>
+                <option value="biWeekly">Other Week</option>
                 <option value="month">Month</option>
               </select>
-              <label htmlFor="automate-time">Duration</label>
+              <span> I spend </span>
               <input
                 type="number"
                 id="duration"
-                placeholder="Duration"
+                placeholder="10,15,20"
                 onChange={this.handleChange}
               />
+              <span> minutes</span>
+            <div className="row">
             </div>
 
             <div className="row">
-              <label htmlFor="complete-time">Time to automate</label>
+              <span>And to automate the task would take...</span>
               <input
                 type="text"
                 id="automationTime"
                 placeholder="Time in minutes"
                 onChange={this.handleChange}
               />
+              <span> minutes</span>
             </div>
             
             <button className="row" type="submit">
