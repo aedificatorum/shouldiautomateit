@@ -18,6 +18,12 @@ class App extends Component {
     });
   };
 
+  handleChangeNumber = event => {
+    this.setState({
+      [event.target.id]: Number(event.target.value)
+    });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     let numberOfTimesPerMonth = 0;
@@ -46,12 +52,12 @@ class App extends Component {
         <h1>Should I automate</h1>
 
         <div className="row">
-          <form className="form" onSubmit={this.handleSubmit}>
+          <form className="form">
               <input
                 type="number"
                 id="frequency"
                 placeholder="1,2,3"
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <span> time{pluralize} every </span>
               <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
@@ -66,7 +72,7 @@ class App extends Component {
                 type="number"
                 id="duration"
                 placeholder="10,15,20"
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <span> minutes</span>
             <div className="row">
