@@ -82,8 +82,8 @@ class App extends Component {
               <span> minutes</span>
             </div>
             
-            <button className="row" type="submit">
-              Submit
+            <button className="row" onClick={() => alert('lol')}>
+              Should I automate it?
             </button>
           </form>
         </div>
