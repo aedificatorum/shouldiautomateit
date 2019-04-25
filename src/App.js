@@ -38,6 +38,7 @@ class App extends Component {
 
   
   render() {
+    let pluralize = this.state.frequency === '1' ? '' : 's'
     console.log(this.state);
     console.log(this.props)
     return (
@@ -52,7 +53,7 @@ class App extends Component {
                 placeholder="1,2,3"
                 onChange={this.handleChange}
               />
-              <span> time every </span>
+              <span> time{pluralize} every </span>
               <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
                 <option value="everyday">day</option>
                 <option value="businessDay">week day</option>
