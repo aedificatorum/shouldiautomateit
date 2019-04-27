@@ -52,7 +52,8 @@ class App extends Component {
 
   
   render() {
-    let displayResult = this.state.calculationsTable.length > 1 ? (<CalculationsTable />) : '';
+    const { calculationsTable } = this.state
+    let displayResult = this.state.calculationsTable.length > 1 ? (<CalculationsTable table={calculationsTable}/>) : '';
 
     return (
       <div>

@@ -1,8 +1,8 @@
 import React from "react"
 
-const CalculationsTable = () => {
+const CalculationsTable = ({table}) => {
   return (
-    <div>Calculations Table</div>
+    <div>{table.length}</div>
   )
 }
 
