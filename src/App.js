@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Pluralize from "./Pluralize"
+import Pluralize from "./Pluralize";
+import CalculationsTable from "./CalculationsTable"
 
 class App extends Component {
   constructor() {
@@ -32,9 +33,11 @@ class App extends Component {
     let numberOfTimesPerMonth = 0;
     if (this.state.unit === "" || this.state.unit === "everyday") {
       numberOfTimesPerMonth = this.state.frequency * 30
-
+      this.setState({
+        calculationsTable: [...this.state.calculationsTable, this.state.calculationsTable[0]]
+      })
       console.log(numberOfTimesPerMonth)
-      console.log(this.state)
+      console.log('state', this.state)
     } else if (this.state.unit === "businessDay") {
       numberOfTimesPerMonth = this.state.frequency * 20
     } else if (this.state.unit === "week") {
@@ -49,6 +52,8 @@ class App extends Component {
 
   
   render() {
+    let displayResult = this.state.calculationsTable.length > 1 ? (<CalculationsTable />) : '';
+
     return (
       <div>
         <h1>Should I automate</h1>
@@ -95,9 +100,12 @@ class App extends Component {
               Should I automate it?
             </button>
           </form>
+          
+
+        {displayResult}
         </div>
-        {/* <div>{result}</div> */}
-      </div>
+        </div>
+ 
     );
   }
 }
