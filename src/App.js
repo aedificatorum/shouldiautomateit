@@ -8,7 +8,15 @@ class App extends Component {
       frequency: 0,
       unit: "",
       duration: 0,
-      automationTime: 0
+      automationTime: 0,
+      calculationsTable: [{
+        month: 1,
+        timeSaved: 100,
+        roiSlow: -3500,
+        roiMed: -1100,
+        roiFast: -500,
+        shouldIAutomate: 'No'
+      }]
     };
   }
 
@@ -18,12 +26,14 @@ class App extends Component {
     });
   };
 
-  handleSubmit = event => {
+  handleClick = event => {
     event.preventDefault();
     let numberOfTimesPerMonth = 0;
     if (this.state.unit === "" || this.state.unit === "everyday") {
       numberOfTimesPerMonth = this.state.frequency * 30
+
       console.log(numberOfTimesPerMonth)
+      console.log(this.state)
     } else if (this.state.unit === "businessDay") {
       numberOfTimesPerMonth = this.state.frequency * 20
     } else if (this.state.unit === "week") {
@@ -39,8 +49,9 @@ class App extends Component {
   
   render() {
     let pluralize = this.state.frequency === '1' ? '' : 's'
-    console.log(this.state);
-    console.log(this.props)
+
+    // let result = this.state. ? <div>{this.state.}</div> : <div>Noooooo</div>
+
     return (
       <div>
         <h1>Should I automate</h1>
@@ -83,11 +94,12 @@ class App extends Component {
               <span> minutes</span>
             </div>
             
-            <button className="row" onClick={() => alert('lol')}>
+            <button className="row" onClick={this.handleClick}>
               Should I automate it?
             </button>
           </form>
         </div>
+        {/* <div>{result}</div> */}
       </div>
     );
   }
