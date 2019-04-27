@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Pluralize from "./Pluralize"
 
 class App extends Component {
   constructor() {
@@ -44,9 +45,6 @@ class App extends Component {
 
   
   render() {
-    let pluralize = this.state.frequency === '1' ? '' : 's'
-    console.log(this.state);
-    console.log(this.props)
     return (
       <div>
         <h1>Should I automate</h1>
@@ -59,7 +57,7 @@ class App extends Component {
                 placeholder="1,2,3"
                 onChange={this.handleChangeNumber}
               />
-              <span> time{pluralize} every </span>
+              <span> <Pluralize count={this.state.frequency}>time</Pluralize> every </span>
               <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
                 <option value="everyday">day</option>
                 <option value="businessDay">week day</option>
@@ -74,7 +72,7 @@ class App extends Component {
                 placeholder="10,15,20"
                 onChange={this.handleChangeNumber}
               />
-              <span> minutes</span>
+              <span> <Pluralize count={this.state.duration}>minute</Pluralize></span>
             <div className="row">
             </div>
 
