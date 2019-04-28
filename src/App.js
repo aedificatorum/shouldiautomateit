@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Pluralize from "./Pluralize";
 import CalculationsTable from "./CalculationsTable";
+import '../node_modules/materialize-css/dist/css/materialize.css'
+import '../node_modules/materialize-css/dist/js/materialize.js'
 
 class App extends Component {
   constructor() {
