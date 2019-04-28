@@ -66,14 +66,13 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Should I automate</h1>
-
+        <h1>Should I automate it?</h1>
         <div className="row">
           <form className="form">
             <input
               type="number"
               id="frequency"
-              placeholder="1,2,3"
+              placeholder="1, 2, 3..."
               onChange={this.handleChangeNumber}
             />
             <span>
@@ -98,30 +97,32 @@ class App extends Component {
             <input
               type="number"
               id="duration"
-              placeholder="10,15,20"
+              placeholder="10, 15, 20..."
               onChange={this.handleChangeNumber}
             />
             <span>
               {" "}
               <Pluralize count={this.state.duration}>minute</Pluralize>
             </span>
-            <div className="row" />
-
             <div className="row">
               <span>And to automate the task would take...</span>
               <input
-                type="text"
+                type="number"
                 id="automationTime"
-                placeholder="Time in minutes"
+                placeholder="30, 60, 90..."
                 onChange={this.handleChange}
               />
-              <span> minutes</span>
+              <span>
+                {" "}
+                <Pluralize count={this.state.automationTime}>minute</Pluralize>
+              </span>
             </div>
-            <button className="row" onClick={this.handleClick}>
-              Should I automate it?
-            </button>
+            <div className="row">
+              <button className="row" onClick={this.handleClick}>
+                Should I automate it?
+              </button>
+            </div>
           </form>
-
           {displayResult}
         </div>
       </div>
