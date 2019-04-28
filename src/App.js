@@ -50,63 +50,61 @@ class App extends Component {
     console.log('hey in Submit', this.state.frequency)
   };
 
-  
+
   render() {
     const { calculationsTable } = this.state
-    let displayResult = this.state.calculationsTable.length > 1 ? (<CalculationsTable table={calculationsTable}/>) : '';
+    let displayResult = this.state.calculationsTable.length > 1 ? (<CalculationsTable table={calculationsTable} />) : '';
 
     return (
       <div>
-        <h1>Should I automate</h1>
+        <h1>Should I automate it?</h1>
 
-        <div className="row">
-          <form className="form">
-              <input
-                type="number"
-                id="frequency"
-                placeholder="1,2,3"
-                onChange={this.handleChangeNumber}
-              />
-              <span> <Pluralize count={this.state.frequency}>time</Pluralize> every </span>
-              <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
-                <option value="everyday">day</option>
-                <option value="businessDay">week day</option>
-                <option value="week">Week</option>
-                <option value="biWeekly">Other Week</option>
-                <option value="month">Month</option>
-              </select>
-              <span> I spend </span>
-              <input
-                type="number"
-                id="duration"
-                placeholder="10,15,20"
-                onChange={this.handleChangeNumber}
-              />
-              <span> <Pluralize count={this.state.duration}>minute</Pluralize></span>
-            <div className="row">
-            </div>
+        <form className="form">
+          <div className="row">
+            <input
+              type="number"
+              id="frequency"
+              placeholder="1, 2, 3..."
+              onChange={this.handleChangeNumber}
+            />
+            <span> <Pluralize count={this.state.frequency}>time</Pluralize> every </span>
+            <select type="text" id="unit" onChange={this.handleChange} value={this.state.value}>
+              <option value="everyday">day</option>
+              <option value="businessDay">week day</option>
+              <option value="week">Week</option>
+              <option value="biWeekly">Other Week</option>
+              <option value="month">Month</option>
+            </select>
+            <span> I spend </span>
+            <input
+              type="number"
+              id="duration"
+              placeholder="10, 15, 20..."
+              onChange={this.handleChangeNumber}
+            />
+            <span> <Pluralize count={this.state.duration}>minute</Pluralize></span>
+          </div>
 
-            <div className="row">
-              <span>And to automate the task would take...</span>
-              <input
-                type="text"
-                id="automationTime"
-                placeholder="Time in minutes"
-                onChange={this.handleChange}
-              />
-              <span> minutes</span>
-            </div>
-            
+          <div className="row">
+            <span>And to automate the task would take...</span>
+            <input
+              type="number"
+              id="automationTime"
+              placeholder="30, 60, 90..."
+              onChange={this.handleChange}
+            />
+            <span> <Pluralize count={this.state.automationTime}>minute</Pluralize></span>
+          </div>
+
+          <div className="row">
             <button className="row" onClick={this.handleClick}>
               Should I automate it?
-            </button>
-          </form>
-          
+          </button>
+          </div>
+        </form>
 
         {displayResult}
-        </div>
-        </div>
- 
+      </div>
     );
   }
 }
