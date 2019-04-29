@@ -68,7 +68,7 @@ class App extends Component {
         <h1>Should I automate it?</h1>
         <div className="row">
           <form className="col s12">
-            <div class="row">
+            <div className="row">
               <input
                 type="number"
                 id="frequency"
@@ -121,7 +121,7 @@ class App extends Component {
               </div>
               <div className="row">
                 <button
-                  class="waves-effect waves-light btn"
+                  className="waves-effect waves-light btn"
                   onClick={this.handleClick}
                 >
                   Should I automate it?
