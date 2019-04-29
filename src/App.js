@@ -43,8 +43,6 @@ class App extends Component {
           this.state.calculationsTable[0]
         ]
       });
-      console.log(numberOfTimesPerMonth);
-      console.log("state", this.state);
     } else if (this.state.unit === "businessDay") {
       numberOfTimesPerMonth = this.state.frequency * 20;
     } else if (this.state.unit === "week") {
@@ -54,7 +52,6 @@ class App extends Component {
     } else {
       numberOfTimesPerMonth = this.state.frequency;
     }
-    console.log("hey in Submit", this.state.frequency);
   };
 
   render() {
