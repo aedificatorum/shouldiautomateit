@@ -34,30 +34,31 @@ class App extends Component {
 
   handleClick = event => {
     event.preventDefault();
+    const { unit, frequency, calculationsTable } = this.state;
     let numberOfTimesPerMonth = 0;
-    if (this.state.unit === "" || this.state.unit === "everyday") {
-      numberOfTimesPerMonth = this.state.frequency * 30;
+    if (unit === "" || unit === "everyday") {
+      numberOfTimesPerMonth = frequency * 30;
       this.setState({
         calculationsTable: [
-          ...this.state.calculationsTable,
-          this.state.calculationsTable[0]
+          ...calculationsTable,
+          calculationsTable[0]
         ]
       });
-    } else if (this.state.unit === "businessDay") {
-      numberOfTimesPerMonth = this.state.frequency * 20;
-    } else if (this.state.unit === "week") {
-      numberOfTimesPerMonth = this.state.frequency * 4;
-    } else if (this.state.unit === "biWeekly") {
-      numberOfTimesPerMonth = this.state.frequency * 2;
+    } else if (unit === "businessDay") {
+      numberOfTimesPerMonth = frequency * 20;
+    } else if (unit === "week") {
+      numberOfTimesPerMonth = frequency * 4;
+    } else if (unit === "biWeekly") {
+      numberOfTimesPerMonth = frequency * 2;
     } else {
-      numberOfTimesPerMonth = this.state.frequency;
+      numberOfTimesPerMonth = frequency;
     }
   };
 
   render() {
-    const { calculationsTable, duration, automationTime, frequency } = this.state;
+    const { calculationsTable, duration, automationTime, frequency, unit } = this.state;
     let displayResult =
-      this.state.calculationsTable.length > 1 ? (
+      calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
       ) : (
         ""
@@ -84,8 +85,9 @@ class App extends Component {
               <select
                 type="text"
                 id="unit"
+                className="browser-default"
                 onChange={this.handleChange}
-                value={this.state.value}
+                value={unit}
               >
                 <option value="everyday">day</option>
                 <option value="businessDay">week day</option>
