@@ -55,7 +55,7 @@ class App extends Component {
   };
 
   render() {
-    const { calculationsTable } = this.state;
+    const { calculationsTable, duration, automationTime, frequency } = this.state;
     let displayResult =
       this.state.calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
@@ -77,7 +77,7 @@ class App extends Component {
               />
               <span>
                 {" "}
-                <Pluralize count={this.state.frequency}>
+                <Pluralize count={frequency}>
                   time
                 </Pluralize> every{" "}
               </span>
@@ -102,7 +102,7 @@ class App extends Component {
               />
               <span>
                 {" "}
-                <Pluralize count={this.state.duration}>minute</Pluralize>
+                <Pluralize count={duration}>minute</Pluralize>
               </span>
               <div className="row">
                 <span>And to automate the task would take...</span>
@@ -114,7 +114,7 @@ class App extends Component {
                 />
                 <span>
                   {" "}
-                  <Pluralize count={this.state.automationTime}>
+                  <Pluralize count={automationTime}>
                     minute
                   </Pluralize>
                 </span>
