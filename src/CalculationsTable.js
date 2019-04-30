@@ -1,7 +1,6 @@
 import React from "react";
 
 const CalculationsTable = ({ table }) => {
-  console.log(table[0].month);
   return (
     <div className="row">
       <table>
