@@ -36,6 +36,7 @@ class App extends Component {
     event.preventDefault();
     const { unit, frequency, calculationsTable } = this.state;
     let numberOfTimesPerMonth = 0;
+    console.log(unit)
     if (unit === "" || unit === "everyday") {
       numberOfTimesPerMonth = frequency * 30;
       this.setState({
@@ -53,6 +54,7 @@ class App extends Component {
     } else {
       numberOfTimesPerMonth = frequency;
     }
+    console.log(this.state.frequency)
   };
 
   render() {
