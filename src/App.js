@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       frequency: 0,
-      unit: "",
+      unit: "30",
       duration: 0,
       automationTime: 0,
       calculationsTable: [
@@ -35,27 +35,17 @@ class App extends Component {
   handleClick = event => {
     event.preventDefault();
     const { unit, frequency, calculationsTable } = this.state;
-    let numberOfTimesPerMonth = 0;
-    console.log(unit)
-    if (unit === "" || unit === "everyday") {
-      numberOfTimesPerMonth = frequency * 30;
-      this.setState({
-        calculationsTable: [
-          ...calculationsTable,
-          calculationsTable[0]
-        ]
-      });
-    } else if (unit === "businessDay") {
-      numberOfTimesPerMonth = frequency * 20;
-    } else if (unit === "week") {
-      numberOfTimesPerMonth = frequency * 4;
-    } else if (unit === "biWeekly") {
-      numberOfTimesPerMonth = frequency * 2;
-    } else {
-      numberOfTimesPerMonth = frequency;
-    }
-    console.log(this.state.frequency)
-  };
+    let numberOfTimesPerMonth = frequency * Number(unit)
+    console.log(this.state)
+    console.log(numberOfTimesPerMonth)
+    
+    this.setState({
+      calculationsTable: [
+        ...calculationsTable,
+        calculationsTable[0]
+      ]
+    })
+  }
 
   render() {
     const { calculationsTable, duration, automationTime, frequency, unit } = this.state;
@@ -76,7 +66,7 @@ class App extends Component {
                 type="number"
                 id="frequency"
                 placeholder="1, 2, 3..."
-                onChange={this.handleChangeNumber}
+                onChange={this.handleChange}
               />
               <span>
                 {" "}
@@ -91,11 +81,11 @@ class App extends Component {
                 onChange={this.handleChange}
                 value={unit}
               >
-                <option value="everyday">day</option>
-                <option value="businessDay">week day</option>
-                <option value="week">Week</option>
-                <option value="biWeekly">Other Week</option>
-                <option value="month">Month</option>
+                <option value="30">day</option>
+                <option value="20">week day</option>
+                <option value="4">Week</option>
+                <option value="2">Other Week</option>
+                <option value="1">Month</option>
               </select>
               <span> I spend </span>
               <input
