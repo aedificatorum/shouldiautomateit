@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Pluralize from "./Pluralize";
+import Calculator from "./Calculator"
 import CalculationsTable from "./CalculationsTable";
 import "../node_modules/materialize-css/dist/css/materialize.css";
 import "../node_modules/materialize-css/dist/js/materialize.js";
@@ -13,16 +14,7 @@ class App extends Component {
       unit: "30",
       duration: 0,
       automationTime: 0,
-      calculationsTable: [
-        {
-          month: 1,
-          timeSaved: 100,
-          roiSlow: -3500,
-          roiMed: -1100,
-          roiFast: -500,
-          shouldIAutomate: "No"
-        }
-      ]
+      calculationsTable: []
     };
   }
 
