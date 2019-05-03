@@ -38,14 +38,24 @@ class App extends Component {
     });
   }
 
+  canBeSubmitted = () => {
+    const { duration, automationTime, frequency, unit } = this.state;
+
+    return (frequency > 0
+            && unit !== ""
+            && duration > 0
+            && automationTime > 0);
+  }
+
   render() {
     const { calculationsTable, duration, automationTime, frequency, unit } = this.state;
     let displayResult =
       calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
       ) : (
-        ""
-      );
+          ""
+        );
+    const isCalculateDisabled = !this.canBeSubmitted();
 
     return (
       <div className="container">
@@ -83,7 +93,7 @@ class App extends Component {
                 type="number"
                 id="duration"
                 placeholder="10, 15, 20..."
-                onChange={this.handleChangeNumber}
+                onChange={this.handleChange}
               />
               <span>
                 {" "}
@@ -107,6 +117,7 @@ class App extends Component {
               <div className="row">
                 <button
                   className="waves-effect waves-light btn"
+                  disabled={isCalculateDisabled}
                   onClick={this.handleClick}
                 >
                   Should I automate it?
