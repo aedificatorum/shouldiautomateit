@@ -29,7 +29,6 @@ const CalculationsTable = ({ table }) => {
           })}
         </tbody>
       </table>
-      {table.length}
     </div>
   );
 };
