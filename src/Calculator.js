@@ -1,4 +1,4 @@
-function Calculator(numberOfMonths = 36) {
+function Calculator(duration, automationTime, numberOfTimesPerMonth, numberOfMonths = 36) {
     let rows = [];
 
     for(let i = 0; i < numberOfMonths; i++) {
