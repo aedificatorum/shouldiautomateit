@@ -27,11 +27,10 @@ class App extends Component {
   handleClick = event => {
     event.preventDefault();
 
-    const { unit, frequency } = this.state;
+    const { unit, frequency, duration, automationTime} = this.state;
     let numberOfTimesPerMonth = frequency * Number(unit);
 
-    // TODO: Pass required parameters to Calculator
-    let calculationTable = Calculator();
+    let calculationTable = Calculator(duration, automationTime, numberOfTimesPerMonth);
 
     this.setState({
       calculationsTable: calculationTable

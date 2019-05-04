@@ -1,13 +1,15 @@
-function Calculator(numberOfMonths = 36) {
+function Calculator(duration, automationTime, numberOfTimesPerMonth, numberOfMonths = 36) {
     let rows = [];
 
     for(let i = 0; i < numberOfMonths; i++) {
+        let month = i + 1;
+        let timeSaved = duration * numberOfTimesPerMonth * month;
         rows.push({
-            month: i + 1,
-            timeSaved: 100,
-            roiSlow: -3500,
-            roiMed: -1100,
-            roiFast: -500,
+            month,
+            timeSaved,
+            roiSlow: timeSaved - automationTime,
+            roiMed: timeSaved - automationTime,
+            roiFast: timeSaved - automationTime,
             shouldIAutomate: "No"
           }
         );
