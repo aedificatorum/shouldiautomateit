@@ -5,13 +5,14 @@ function Calculator(duration, automationTime, numberOfTimesPerMonth, numberOfMon
         let month = i + 1;
         let timeSaved = duration * numberOfTimesPerMonth * month;
         let maxAutomateTime = automationTime * maxSlowDown;
+        let minAutomateTime = automationTime * maxSpeedUp;
 
         rows.push({
             month,
             timeSaved,
             roiSlow: timeSaved - maxAutomateTime,
             roiMed: timeSaved - automationTime,
-            roiFast: timeSaved - automationTime,
+            roiFast: timeSaved - minAutomateTime,
             shouldIAutomate: "no"
           }
         );
