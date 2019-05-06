@@ -3,7 +3,7 @@ import React from "react";
 const CalculationsTable = ({ table }) => {
   return (
     <div className="row">
-      <table>
+      <table className="striped">
         <thead>
           <tr>
             <th>Month</th>

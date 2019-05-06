@@ -67,7 +67,7 @@ class App extends Component {
       <div className="container">
         <h1>Should I automate it?</h1>
         <div className="row">
-          <form className="col s12">
+          <form className="col m6 s12">
             <div className="row">
               <input
                 type="number"

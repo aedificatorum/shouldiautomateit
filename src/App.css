@@ -12,9 +12,13 @@ body {
 }
 
 select[type=text] {
-  margin: 20px 0
+  margin: 20px 0;
 }
 
 .form-label {
-  margin: 20px 0
+  margin: 20px 0;
+}
+
+form {
+  margin-top: 30px;
 }
