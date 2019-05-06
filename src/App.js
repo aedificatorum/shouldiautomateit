@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Pluralize from "./Pluralize";
-import Calculator from "./Calculator"
+import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
 import "../node_modules/materialize-css/dist/css/materialize.css";
 import "../node_modules/materialize-css/dist/js/materialize.js";
@@ -27,33 +27,40 @@ class App extends Component {
   handleClick = event => {
     event.preventDefault();
 
-    const { unit, frequency, duration, automationTime} = this.state;
+    const { unit, frequency, duration, automationTime } = this.state;
     let numberOfTimesPerMonth = frequency * Number(unit);
 
-    let calculationTable = Calculator(duration, automationTime, numberOfTimesPerMonth);
+    let calculationTable = Calculator(
+      duration,
+      automationTime,
+      numberOfTimesPerMonth
+    );
 
     this.setState({
       calculationsTable: calculationTable
     });
-  }
+  };
 
   canBeSubmitted = () => {
     const { duration, automationTime, frequency, unit } = this.state;
 
-    return (frequency > 0
-            && unit !== ""
-            && duration > 0
-            && automationTime > 0);
-  }
+    return frequency > 0 && unit !== "" && duration > 0 && automationTime > 0;
+  };
 
   render() {
-    const { calculationsTable, duration, automationTime, frequency, unit } = this.state;
+    const {
+      calculationsTable,
+      duration,
+      automationTime,
+      frequency,
+      unit
+    } = this.state;
     let displayResult =
       calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
       ) : (
-          ""
-        );
+        ""
+      );
     const isCalculateDisabled = !this.canBeSubmitted();
 
     return (
@@ -70,9 +77,7 @@ class App extends Component {
               />
               <span>
                 {" "}
-                <Pluralize count={frequency}>
-                  time
-                </Pluralize> every{" "}
+                <Pluralize count={frequency}>time</Pluralize> every{" "}
               </span>
               <select
                 type="text"
@@ -98,22 +103,20 @@ class App extends Component {
                 {" "}
                 <Pluralize count={duration}>minute</Pluralize>
               </span>
-              
-                <div>And to automate the task would take...</div>
-                <input
-                  type="number"
-                  id="automationTime"
-                  placeholder="30, 60, 90..."
-                  onChange={this.handleChange}
-                />
-                <span>
-                  {" "}
-                  <Pluralize count={automationTime}>
-                    minute
-                  </Pluralize>
-                </span>
-       
-             <div>
+
+              <div>And to automate the task would take...</div>
+              <input
+                type="number"
+                id="automationTime"
+                placeholder="30, 60, 90..."
+                onChange={this.handleChange}
+              />
+              <span>
+                {" "}
+                <Pluralize count={automationTime}>minute</Pluralize>
+              </span>
+
+              <div>
                 <button
                   className="waves-effect waves-light btn"
                   disabled={isCalculateDisabled}
@@ -121,7 +124,7 @@ class App extends Component {
                 >
                   Should I automate it?
                 </button>
-                </div>
+              </div>
             </div>
           </form>
           {displayResult}
