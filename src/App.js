@@ -98,8 +98,8 @@ class App extends Component {
                 {" "}
                 <Pluralize count={duration}>minute</Pluralize>
               </span>
-              <div className="row">
-                <span>And to automate the task would take...</span>
+              
+                <div>And to automate the task would take...</div>
                 <input
                   type="number"
                   id="automationTime"
@@ -112,8 +112,8 @@ class App extends Component {
                     minute
                   </Pluralize>
                 </span>
-              </div>
-              <div className="row">
+       
+             <div>
                 <button
                   className="waves-effect waves-light btn"
                   disabled={isCalculateDisabled}
@@ -121,7 +121,7 @@ class App extends Component {
                 >
                   Should I automate it?
                 </button>
-              </div>
+                </div>
             </div>
           </form>
           {displayResult}
