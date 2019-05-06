@@ -104,7 +104,7 @@ class App extends Component {
                 <Pluralize count={duration}>minute</Pluralize>
               </span>
 
-              <div>And to automate the task would take...</div>
+              <div className='form-label'>And to automate the task would take...</div>
               <input
                 type="number"
                 id="automationTime"
@@ -116,7 +116,7 @@ class App extends Component {
                 <Pluralize count={automationTime}>minute</Pluralize>
               </span>
 
-              <div>
+              <div className='button'>
                 <button
                   className="waves-effect waves-light btn"
                   disabled={isCalculateDisabled}

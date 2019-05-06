@@ -7,6 +7,18 @@ body {
   color: #61dafb;
 }
 
+.button {
+  margin: 25px 0;
+}
+
+select[type=text] {
+  margin: 20px 0
+}
+
+.form-label {
+  margin: 20px 0
+}
+
 /* .row {
   display: flex;
   flex-wrap: wrap;
