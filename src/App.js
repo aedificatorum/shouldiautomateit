@@ -65,10 +65,9 @@ class App extends Component {
 
     return (
       <div className="container">
-        <h1>Should I automate it?</h1>
         <div className="row">
           <form className="col m6 s12">
-            <div className="row">
+            <div className="row blue-grey lighten-5 form-color">
               <input
                 type="number"
                 id="frequency"
@@ -104,7 +103,9 @@ class App extends Component {
                 <Pluralize count={duration}>minute</Pluralize>
               </span>
 
-              <div className='form-label'>And to automate the task would take...</div>
+              <div className="form-label">
+                And to automate the task would take...
+              </div>
               <input
                 type="number"
                 id="automationTime"
@@ -116,7 +117,7 @@ class App extends Component {
                 <Pluralize count={automationTime}>minute</Pluralize>
               </span>
 
-              <div className='button'>
+              <div className="button">
                 <button
                   className="waves-effect waves-light btn"
                   disabled={isCalculateDisabled}
@@ -127,6 +128,13 @@ class App extends Component {
               </div>
             </div>
           </form>
+
+          <form className="col m5 offset-m1">
+            <div className="row blue-grey lighten-5 form-color">
+              Advanced Options
+            </div>
+          </form>
+
           {displayResult}
         </div>
       </div>
