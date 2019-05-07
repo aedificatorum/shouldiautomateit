@@ -26,3 +26,23 @@ form {
   width: 1.5%;
   height: auto;
 }
+
+.form-color {
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px 30px 0 30px;
+}
+
+.brand-logo img {
+  width: 13%;
+  height: auto;
+}
+
+.navbar-title {
+  padding-left: 210px;
+  font-size: 2.5em;
+}
+
+.navbar-title {
+  font-family: 'Abril Fatface', cursive;
+}
