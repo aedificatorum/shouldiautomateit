@@ -1,5 +1,4 @@
 body {
-  width:90%;
   margin:0px auto;
 }
 
@@ -21,4 +20,9 @@ select[type=text] {
 
 form {
   margin-top: 30px;
+}
+
+.logo {
+  width: 1.5%;
+  height: auto;
 }
