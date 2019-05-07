@@ -65,8 +65,7 @@ class App extends Component {
 
     return (
       <div className="container">
-        <h1>Should I automate it?</h1>
-        <div className="row">
+        <div className="row blue-grey lighten-5 form-color">
           <form className="col m6 s12">
             <div className="row">
               <input
