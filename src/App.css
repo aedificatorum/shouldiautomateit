@@ -22,6 +22,11 @@ form {
   margin-top: 30px;
 }
 
+.logo {
+  width: 1.5%;
+  height: auto;
+}
+
 .form-color {
   border-radius: 5px;
   margin-top: 20px;
