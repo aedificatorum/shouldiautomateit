@@ -26,3 +26,8 @@ form {
   width: 13%;
   height: auto;
 }
+
+.navbar-title {
+  padding-left: 100px;
+  font-size: 3em;
+}
