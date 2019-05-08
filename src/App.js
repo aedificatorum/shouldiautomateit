@@ -72,6 +72,9 @@ class App extends Component {
                 type="number"
                 id="frequency"
                 placeholder="1, 2, 3..."
+                className="tooltipped"
+                data-position="left" 
+                data-tooltip="Task's frequency"
                 onChange={this.handleChange}
               />
               <span>
@@ -95,6 +98,9 @@ class App extends Component {
               <input
                 type="number"
                 id="duration"
+                className="tooltipped"
+                data-position="left" 
+                data-tooltip="Task's duration"
                 placeholder="10, 15, 20..."
                 onChange={this.handleChange}
               />
