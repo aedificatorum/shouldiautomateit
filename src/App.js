@@ -140,6 +140,13 @@ class App extends Component {
                 placeholder="0.3, 0.5, 0.7..."
                 onChange={this.handleChange}
               />
+              <label>Max Slow down</label>
+              <input
+                type="number"
+                id="maxSlowDown"
+                placeholder="1, 2, 3..."
+                onChange={this.handleChange}
+              />
             </div>
           </form>
 
