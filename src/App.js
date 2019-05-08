@@ -132,7 +132,6 @@ class App extends Component {
           <form className="col m5 offset-m1">
             <div className="row blue-grey lighten-5 form-color">
               <div>Advanced options</div>
-              <label>Max Speed</label>
               <input
                 type="number"
                 step="0.1"
@@ -140,13 +139,14 @@ class App extends Component {
                 placeholder="0.3, 0.5, 0.7..."
                 onChange={this.handleChange}
               />
-              <label>Max Slow down</label>
+              <label>Max Speed</label>
               <input
                 type="number"
                 id="maxSlowDown"
                 placeholder="1, 2, 3..."
                 onChange={this.handleChange}
               />
+              <label>Max Slow down</label>
             </div>
           </form>
 
