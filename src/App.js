@@ -131,7 +131,15 @@ class App extends Component {
 
           <form className="col m5 offset-m1">
             <div className="row blue-grey lighten-5 form-color">
-              Advanced Options
+              <div>Advanced options</div>
+              <label>Max Speed</label>
+              <input
+                type="number"
+                step="0.1"
+                id="maxSpeedUp"
+                placeholder="0.3, 0.5, 0.7..."
+                onChange={this.handleChange}
+              />
             </div>
           </form>
 
