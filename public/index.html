@@ -24,7 +24,7 @@
     -->
     <title>Should I automate it?</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
@@ -32,12 +32,19 @@
         <div class="nav-wrapper black">
           <a href="#" class="navbar-title">Should I automate it?</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">About</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </div>
       </nav>
             
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.tooltipped').tooltip();
+        });
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -54,11 +61,11 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">About</h5>
+            <h4 class="white-text" id="about">About</h4>
             <p class="grey-text text-lighten-4">Should I automate it? is designed for anyone interested to see when a manual process would benefit from being automated.</p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
+            <h4 class="white-text">Links</h4>
             <ul>
               <li><a class="grey-text text-lighten-3" href="https://github.com/aedificatorum/shouldiautomateit" target="blank">GitHub</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>

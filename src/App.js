@@ -72,6 +72,9 @@ class App extends Component {
                 type="number"
                 id="frequency"
                 placeholder="1, 2, 3..."
+                className="tooltipped"
+                data-position="left" 
+                data-tooltip="Task's frequency"
                 onChange={this.handleChange}
               />
               <span>
@@ -95,6 +98,9 @@ class App extends Component {
               <input
                 type="number"
                 id="duration"
+                className="tooltipped"
+                data-position="left" 
+                data-tooltip="Task's duration"
                 placeholder="10, 15, 20..."
                 onChange={this.handleChange}
               />
@@ -131,7 +137,22 @@ class App extends Component {
 
           <form className="col m5 offset-m1">
             <div className="row blue-grey lighten-5 form-color">
-              Advanced Options
+              <div>Advanced options</div>
+              <input
+                type="number"
+                step="0.1"
+                id="maxSpeedUp"
+                placeholder="0.3, 0.5, 0.7..."
+                onChange={this.handleChange}
+              />
+              <label>Max Speed</label>
+              <input
+                type="number"
+                id="maxSlowDown"
+                placeholder="1, 2, 3..."
+                onChange={this.handleChange}
+              />
+              <label>Max Slow down</label>
             </div>
           </form>
 

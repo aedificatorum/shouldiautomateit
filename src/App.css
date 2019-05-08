@@ -43,6 +43,10 @@ form {
   font-size: 2.5em;
 }
 
-.navbar-title {
-  font-family: 'Abril Fatface', cursive;
+.navbar-title, h4, nav {
+  font-family: 'Indie Flower', cursive;
+}
+
+nav ul a {
+  font-size: 20px !important;
 }
