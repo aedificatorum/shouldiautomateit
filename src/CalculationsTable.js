@@ -18,13 +18,13 @@ const CalculationsTable = ({ table }) => {
           {table.map((row, i) => {
             return (
               <tr key={i}>
-              <td>{row.month}</td>
-              <td>{row.timeSaved}</td>
-              <td>{row.roiSlow}</td>
-              <td>{row.roiMed}</td>
-              <td>{row.roiFast}</td>
-              <td>{row.shouldIAutomate}</td>
-            </tr>
+                <td>{row.month}</td>
+                <td>{row.timeSaved}</td>
+                <td>{row.roiSlow}</td>
+                <td>{row.roiMed}</td>
+                <td>{row.roiFast}</td>
+                <td>{row.shouldIAutomate}</td>
+              </tr>
             )
           })}
         </tbody>

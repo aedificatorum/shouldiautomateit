@@ -1,7 +1,7 @@
 function Calculator(duration, automationTime, numberOfTimesPerMonth, numberOfMonths = 36, maxSpeedUp = 0.5, maxSlowDown = 3) {
     let rows = [];
 
-    for(let i = 0; i < numberOfMonths; i++) {
+    for (let i = 0; i < numberOfMonths; i++) {
         let month = i + 1;
         let timeSaved = duration * numberOfTimesPerMonth * month;
         let maxAutomateTime = automationTime * maxSlowDown;
@@ -15,7 +15,7 @@ function Calculator(duration, automationTime, numberOfTimesPerMonth, numberOfMon
             shouldIAutomate = 'Definitely'
         } else if (roiMed > 0) {
             shouldIAutomate = 'Probably'
-        } else if (roiFast > 0 ) {
+        } else if (roiFast > 0) {
             shouldIAutomate = 'Maybe'
         }
 
@@ -26,7 +26,7 @@ function Calculator(duration, automationTime, numberOfTimesPerMonth, numberOfMon
             roiMed,
             roiFast,
             shouldIAutomate
-          }
+        }
         );
     }
 

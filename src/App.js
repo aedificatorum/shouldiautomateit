@@ -59,8 +59,8 @@ class App extends Component {
       calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
       ) : (
-        ""
-      );
+          ""
+        );
     const isCalculateDisabled = !this.canBeSubmitted();
 
     return (
@@ -73,7 +73,7 @@ class App extends Component {
                 id="frequency"
                 placeholder="1, 2, 3..."
                 className="tooltipped"
-                data-position="left" 
+                data-position="left"
                 data-tooltip="Task's frequency"
                 onChange={this.handleChange}
               />
@@ -99,7 +99,7 @@ class App extends Component {
                 type="number"
                 id="duration"
                 className="tooltipped"
-                data-position="left" 
+                data-position="left"
                 data-tooltip="Task's duration"
                 placeholder="10, 15, 20..."
                 onChange={this.handleChange}
