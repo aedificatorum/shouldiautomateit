@@ -117,6 +117,8 @@ class App extends Component {
               <input
                 type="number"
                 id="automationTime"
+                data-position="left"
+                data-tooltip="How long to automate"
                 placeholder="30, 60, 90..."
                 onChange={this.handleChange}
               />
