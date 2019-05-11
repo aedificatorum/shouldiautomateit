@@ -74,7 +74,7 @@ class App extends Component {
                 placeholder="1, 2, 3..."
                 className="tooltipped"
                 data-position="left"
-                data-tooltip="Task's frequency"
+                data-tooltip="How often you do it"
                 onChange={this.handleChange}
               />
               <span>
@@ -94,27 +94,31 @@ class App extends Component {
                 <option value="2">Other Week</option>
                 <option value="1">Month</option>
               </select>
-              <span> I spend </span>
+              <span> I could save </span>
               <input
                 type="number"
                 id="duration"
                 className="tooltipped"
                 data-position="left"
-                data-tooltip="Task's duration"
+                data-tooltip="Time saved"
                 placeholder="10, 15, 20..."
                 onChange={this.handleChange}
               />
               <span>
                 {" "}
                 <Pluralize count={duration}>minute</Pluralize>
+                {" "}
+                through automation.
               </span>
 
               <div className="form-label">
-                And to automate the task would take...
+                That automation would take...
               </div>
               <input
                 type="number"
                 id="automationTime"
+                data-position="left"
+                data-tooltip="How long to automate"
                 placeholder="30, 60, 90..."
                 onChange={this.handleChange}
               />
