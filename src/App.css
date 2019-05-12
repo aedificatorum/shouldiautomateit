@@ -41,7 +41,7 @@ form {
 }
 
 .advanced-form {
-  padding: 20px 30px 20px 30px;
+  padding: 10px 30px 20px 30px;
 }
 
 .brand-logo img {
@@ -54,7 +54,7 @@ form {
   font-size: 2.5em;
 }
 
-.navbar-title, h4, nav {
+.navbar-title, h4, nav, h5 {
   font-family: 'Indie Flower', cursive;
 }
 

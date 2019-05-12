@@ -82,6 +82,7 @@ class App extends Component {
         <div className="row">
           <form className="col m6 s12">
             <div className="row blue-grey lighten-5 basic-form">
+              <h5>Basic options</h5>
               <input
                 type="number"
                 id="frequency"
@@ -148,7 +149,7 @@ class App extends Component {
 
           <form className="col m5 offset-m1">
             <div className="row blue-grey lighten-5 advanced-form">
-              <div>Advanced options</div>
+              <h5>Advanced options</h5>
               <input
                 type="number"
                 value={maxSpeedUp}
