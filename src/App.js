@@ -29,13 +29,23 @@ class App extends Component {
   handleClick = event => {
     event.preventDefault();
 
-    const { unit, frequency, duration, automationTime } = this.state;
+    const {
+      unit,
+      frequency,
+      duration,
+      automationTime,
+      maxSlowDown,
+      maxSpeedUp
+    } = this.state;
     let numberOfTimesPerMonth = frequency * Number(unit);
 
     let calculationTable = Calculator(
       duration,
       automationTime,
-      numberOfTimesPerMonth
+      numberOfTimesPerMonth,
+      36,
+      maxSpeedUp,
+      maxSlowDown
     );
 
     this.setState({
@@ -63,8 +73,8 @@ class App extends Component {
       calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
       ) : (
-          ""
-        );
+        ""
+      );
     const isCalculateDisabled = !this.canBeSubmitted();
 
     return (
@@ -110,14 +120,11 @@ class App extends Component {
               />
               <span>
                 {" "}
-                <Pluralize count={duration}>minute</Pluralize>
-                {" "}
-                through automation.
+                <Pluralize count={duration}>minute</Pluralize> through
+                automation.
               </span>
 
-              <div className="form-label">
-                That automation would take...
-              </div>
+              <div className="form-label">That automation would take...</div>
               <input
                 type="number"
                 id="automationTime"
