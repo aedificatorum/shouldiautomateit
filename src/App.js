@@ -14,7 +14,9 @@ class App extends Component {
       unit: "30",
       duration: 0,
       automationTime: 0,
-      calculationsTable: []
+      calculationsTable: [],
+      maxSpeedUp: 0.75,
+      maxSlowDown: 2.0
     };
   }
 
@@ -53,7 +55,9 @@ class App extends Component {
       duration,
       automationTime,
       frequency,
-      unit
+      unit,
+      maxSpeedUp,
+      maxSlowDown
     } = this.state;
     let displayResult =
       calculationsTable.length > 1 ? (
@@ -145,15 +149,17 @@ class App extends Component {
               <div>Advanced options</div>
               <input
                 type="number"
+                value={maxSpeedUp}
                 step="0.1"
                 id="maxSpeedUp"
                 placeholder="0.3, 0.5, 0.7..."
                 onChange={this.handleChange}
               />
-              <label>Max Speed</label>
+              <label>Max Speed Up</label>
               <input
                 type="number"
                 id="maxSlowDown"
+                value={maxSlowDown}
                 placeholder="1, 2, 3..."
                 onChange={this.handleChange}
               />
