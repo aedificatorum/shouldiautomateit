@@ -162,6 +162,8 @@ class App extends Component {
                 value={numberOfMonths}
                 placeholder="1, 2, 3..."
                 onChange={this.handleChangeNumber}
+                className="tooltipped"
+                data-tooltip="How many months to forecast"
               />
               <label>Number Of Months</label>
               <input
@@ -171,6 +173,8 @@ class App extends Component {
                 id="maxSpeedUp"
                 placeholder="0.3, 0.5, 0.7..."
                 onChange={this.handleChangeNumber}
+                className="tooltipped"
+                data-tooltip="How much faster the automation could be"
               />
               <label>Max Speed Up</label>
               <input
@@ -179,6 +183,8 @@ class App extends Component {
                 value={maxSlowDown}
                 placeholder="1, 2, 3..."
                 onChange={this.handleChangeNumber}
+                className="tooltipped"
+                data-tooltip="How much slower the automation could be"
               />
               <label>Max Slow Down</label>
             </div>
