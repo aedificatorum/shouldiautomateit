@@ -80,3 +80,7 @@ td.probably {
 td.definitely {
   color: green;
 }
+
+.fa-github {
+  margin-right: 5px;
+}
