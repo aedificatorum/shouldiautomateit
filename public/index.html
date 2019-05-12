@@ -42,21 +42,15 @@
       <li><a href="#about">About</a></li>
     </ul>
   </header>
-  <main>
-    <div id="root"></div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-  </main>
+  <div id="root"></div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
     $(document).ready(function () {
       $('.tooltipped').tooltip();
+      $('.sidenav').sidenav();
     });
   </script>
-  <script>
-          $(document).ready(function () {
-            $('.sidenav').sidenav();
-          });
-        </script>
 </body>
 
 </html>
