@@ -16,7 +16,8 @@ class App extends Component {
       automationTime: 0,
       calculationsTable: [],
       maxSpeedUp: 0.75,
-      maxSlowDown: 2.0
+      maxSlowDown: 2.0,
+      numberOfMonths: 36
     };
   }
 
@@ -35,7 +36,8 @@ class App extends Component {
       duration,
       automationTime,
       maxSlowDown,
-      maxSpeedUp
+      maxSpeedUp,
+      numberOfMonths
     } = this.state;
     let numberOfTimesPerMonth = frequency * Number(unit);
 
@@ -43,7 +45,7 @@ class App extends Component {
       duration,
       automationTime,
       numberOfTimesPerMonth,
-      36,
+      numberOfMonths,
       maxSpeedUp,
       maxSlowDown
     );
@@ -67,7 +69,8 @@ class App extends Component {
       frequency,
       unit,
       maxSpeedUp,
-      maxSlowDown
+      maxSlowDown,
+      numberOfMonths
     } = this.state;
     let displayResult =
       calculationsTable.length > 1 ? (
@@ -150,6 +153,14 @@ class App extends Component {
           <form className="col m5 offset-m1">
             <div className="row blue-grey lighten-5 advanced-form">
               <h5>Advanced options</h5>
+              <input
+                type="number"
+                id="numberOfMonths"
+                value={numberOfMonths}
+                placeholder="1, 2, 3..."
+                onChange={this.handleChange}
+              />
+              <label>Number Of Months</label>
               <input
                 type="number"
                 value={maxSpeedUp}
