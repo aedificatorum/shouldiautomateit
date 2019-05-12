@@ -57,3 +57,19 @@ form {
 nav ul a {
   font-size: 20px !important;
 }
+
+td.no {
+  color: red;
+}
+
+td.maybe {
+  color: orange;
+}
+
+td.probably {
+  color: #9abc03;
+}
+
+td.definitely {
+  color: green;
+}
