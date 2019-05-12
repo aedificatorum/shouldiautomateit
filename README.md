@@ -15,7 +15,7 @@ Inspired by [xkcd 1205] (Is it worth the time?):
 Published via the gh-pages branch.
 
 - `npm run build`
-- `Remove-Item ..\shouldiautomateit-site\* -Recurse -Force -Verbose`
+- `Remove-Item ..\shouldiautomateit-site\* -Exlcude .git\* -Recurse -Force -Verbose`
 - `Copy-Item .\build\* ..\shouldiautomateit-site -Recurse -Force -Verbose`
 - `cd ..\shouldiautomateit-site`
 - `git add .`
