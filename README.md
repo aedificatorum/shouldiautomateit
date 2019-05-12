@@ -11,6 +11,12 @@ Inspired by [xkcd 1205] (Is it worth the time?):
 [xkcd 1205]: https://xkcd.com/1205/
 
 ## Publishing
+Published via the gh-pages branch.
+
 - `npm run build`
+- `Remove-Item ..\shouldiautomateit-site -Recurse -Force -Verbose`
 - `Copy-Item .\build\* ..\shouldiautomateit-site -Recurse -Force -Verbose`
-- Publish gh-pages branch
+- `cd ..\shouldiautomateit-site`
+- `git add .`
+- `git commit -m "adding 1% more awesome"`
+- `git push`
