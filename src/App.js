@@ -81,13 +81,13 @@ class App extends Component {
       <div className="container">
         <div className="row">
           <form className="col m6 s12">
-            <div className="row blue-grey lighten-5 form-color">
+            <div className="row blue-grey lighten-5 basic-form">
               <input
                 type="number"
                 id="frequency"
                 placeholder="1, 2, 3..."
                 className="tooltipped"
-                data-position="left"
+              
                 data-tooltip="How often you do it"
                 onChange={this.handleChange}
               />
@@ -152,7 +152,7 @@ class App extends Component {
           </form>
 
           <form className="col m5 offset-m1">
-            <div className="row blue-grey lighten-5 form-color">
+            <div className="row blue-grey lighten-5 advanced-form">
               <div>Advanced options</div>
               <input
                 type="number"
