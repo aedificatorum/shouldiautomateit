@@ -4,6 +4,7 @@ import Pluralize from "./Pluralize";
 import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
 import Footer from "./Footer";
+import Header from "./Header";
 import "../node_modules/materialize-css/dist/css/materialize.css";
 import "../node_modules/materialize-css/dist/js/materialize.js";
 
@@ -83,6 +84,7 @@ class App extends Component {
 
     return (
       <React.Fragment>
+        <Header />
         <main>
           <div className="container">
             <div className="row">
