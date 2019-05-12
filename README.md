@@ -1,5 +1,7 @@
 # Should I automate it?
 
+[Live Demo](https://aedificatorum.github.io/shouldiautomateit/)
+
 :question:
 
 Inspired by [xkcd 1205] (Is it worth the time?):
