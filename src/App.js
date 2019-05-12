@@ -27,7 +27,7 @@ class App extends Component {
     });
   };
 
-  handleClick = event => {
+  handleSubmit = event => {
     event.preventDefault();
 
     const {
@@ -145,7 +145,7 @@ class App extends Component {
                 <button
                   className="waves-effect waves-light btn"
                   disabled={isCalculateDisabled}
-                  onClick={this.handleChangeNumber}
+                  onClick={this.handleSubmit}
                 >
                   Should I automate it?
                 </button>
