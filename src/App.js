@@ -87,7 +87,6 @@ class App extends Component {
                 id="frequency"
                 placeholder="1, 2, 3..."
                 className="tooltipped"
-              
                 data-tooltip="How often you do it"
                 onChange={this.handleChange}
               />
@@ -113,7 +112,6 @@ class App extends Component {
                 type="number"
                 id="duration"
                 className="tooltipped"
-                data-position="left"
                 data-tooltip="Time saved"
                 placeholder="10, 15, 20..."
                 onChange={this.handleChange}
