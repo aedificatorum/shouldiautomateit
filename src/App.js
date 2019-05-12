@@ -157,7 +157,7 @@ class App extends Component {
                 placeholder="1, 2, 3..."
                 onChange={this.handleChange}
               />
-              <label>Max Slow down</label>
+              <label>Max Slow Down</label>
             </div>
           </form>
 
