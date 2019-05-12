@@ -1,15 +1,15 @@
 {
-  "main.css": "/shouldIAutomateIt/static/css/main.0967ff66.chunk.css",
-  "main.js": "/shouldIAutomateIt/static/js/main.3a1f12ad.chunk.js",
-  "main.js.map": "/shouldIAutomateIt/static/js/main.3a1f12ad.chunk.js.map",
-  "runtime~main.js": "/shouldIAutomateIt/static/js/runtime~main.38e16291.js",
-  "runtime~main.js.map": "/shouldIAutomateIt/static/js/runtime~main.38e16291.js.map",
-  "static/css/2.475ec6e2.chunk.css": "/shouldIAutomateIt/static/css/2.475ec6e2.chunk.css",
-  "static/js/2.2d69c649.chunk.js": "/shouldIAutomateIt/static/js/2.2d69c649.chunk.js",
-  "static/js/2.2d69c649.chunk.js.map": "/shouldIAutomateIt/static/js/2.2d69c649.chunk.js.map",
-  "index.html": "/shouldIAutomateIt/index.html",
-  "precache-manifest.6e81bbbf632836dfd9ef4c0297f1bc3f.js": "/shouldIAutomateIt/precache-manifest.6e81bbbf632836dfd9ef4c0297f1bc3f.js",
-  "service-worker.js": "/shouldIAutomateIt/service-worker.js",
-  "static/css/2.475ec6e2.chunk.css.map": "/shouldIAutomateIt/static/css/2.475ec6e2.chunk.css.map",
-  "static/css/main.0967ff66.chunk.css.map": "/shouldIAutomateIt/static/css/main.0967ff66.chunk.css.map"
+  "main.css": "/shouldiautomateit/static/css/main.0967ff66.chunk.css",
+  "main.js": "/shouldiautomateit/static/js/main.98f065d1.chunk.js",
+  "main.js.map": "/shouldiautomateit/static/js/main.98f065d1.chunk.js.map",
+  "runtime~main.js": "/shouldiautomateit/static/js/runtime~main.e655c175.js",
+  "runtime~main.js.map": "/shouldiautomateit/static/js/runtime~main.e655c175.js.map",
+  "static/css/2.475ec6e2.chunk.css": "/shouldiautomateit/static/css/2.475ec6e2.chunk.css",
+  "static/js/2.2d69c649.chunk.js": "/shouldiautomateit/static/js/2.2d69c649.chunk.js",
+  "static/js/2.2d69c649.chunk.js.map": "/shouldiautomateit/static/js/2.2d69c649.chunk.js.map",
+  "index.html": "/shouldiautomateit/index.html",
+  "precache-manifest.531b020ff7720bbcdc563f401a2db0af.js": "/shouldiautomateit/precache-manifest.531b020ff7720bbcdc563f401a2db0af.js",
+  "service-worker.js": "/shouldiautomateit/service-worker.js",
+  "static/css/2.475ec6e2.chunk.css.map": "/shouldiautomateit/static/css/2.475ec6e2.chunk.css.map",
+  "static/css/main.0967ff66.chunk.css.map": "/shouldiautomateit/static/css/main.0967ff66.chunk.css.map"
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/shouldIAutomateIt/precache-manifest.6e81bbbf632836dfd9ef4c0297f1bc3f.js"
+  "/shouldiautomateit/precache-manifest.531b020ff7720bbcdc563f401a2db0af.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/shouldIAutomateIt/index.html", {
+workbox.routing.registerNavigationRoute("/shouldiautomateit/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
