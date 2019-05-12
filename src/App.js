@@ -14,7 +14,9 @@ class App extends Component {
       unit: "30",
       duration: 0,
       automationTime: 0,
-      calculationsTable: []
+      calculationsTable: [],
+      maxSpeedUp: 0.75,
+      maxSlowDown: 2.0
     };
   }
 
@@ -27,13 +29,23 @@ class App extends Component {
   handleClick = event => {
     event.preventDefault();
 
-    const { unit, frequency, duration, automationTime } = this.state;
+    const {
+      unit,
+      frequency,
+      duration,
+      automationTime,
+      maxSlowDown,
+      maxSpeedUp
+    } = this.state;
     let numberOfTimesPerMonth = frequency * Number(unit);
 
     let calculationTable = Calculator(
       duration,
       automationTime,
-      numberOfTimesPerMonth
+      numberOfTimesPerMonth,
+      36,
+      maxSpeedUp,
+      maxSlowDown
     );
 
     this.setState({
@@ -53,27 +65,28 @@ class App extends Component {
       duration,
       automationTime,
       frequency,
-      unit
+      unit,
+      maxSpeedUp,
+      maxSlowDown
     } = this.state;
     let displayResult =
       calculationsTable.length > 1 ? (
         <CalculationsTable table={calculationsTable} />
       ) : (
-          ""
-        );
+        ""
+      );
     const isCalculateDisabled = !this.canBeSubmitted();
 
     return (
       <div className="container">
         <div className="row">
           <form className="col m6 s12">
-            <div className="row blue-grey lighten-5 form-color">
+            <div className="row blue-grey lighten-5 basic-form">
               <input
                 type="number"
                 id="frequency"
                 placeholder="1, 2, 3..."
                 className="tooltipped"
-                data-position="left"
                 data-tooltip="How often you do it"
                 onChange={this.handleChange}
               />
@@ -99,26 +112,21 @@ class App extends Component {
                 type="number"
                 id="duration"
                 className="tooltipped"
-                data-position="left"
                 data-tooltip="Time saved"
                 placeholder="10, 15, 20..."
                 onChange={this.handleChange}
               />
               <span>
                 {" "}
-                <Pluralize count={duration}>minute</Pluralize>
-                {" "}
-                through automation.
+                <Pluralize count={duration}>minute</Pluralize> through
+                automation.
               </span>
 
-              <div className="form-label">
-                That automation would take...
-              </div>
+              <div className="form-label">That automation would take...</div>
               <input
                 type="number"
                 id="automationTime"
                 className="tooltipped"
-                data-position="left"
                 data-tooltip="How long to automate"
                 placeholder="30, 60, 90..."
                 onChange={this.handleChange}
@@ -141,23 +149,25 @@ class App extends Component {
           </form>
 
           <form className="col m5 offset-m1">
-            <div className="row blue-grey lighten-5 form-color">
+            <div className="row blue-grey lighten-5 advanced-form">
               <div>Advanced options</div>
               <input
                 type="number"
+                value={maxSpeedUp}
                 step="0.1"
                 id="maxSpeedUp"
                 placeholder="0.3, 0.5, 0.7..."
                 onChange={this.handleChange}
               />
-              <label>Max Speed</label>
+              <label>Max Speed Up</label>
               <input
                 type="number"
                 id="maxSlowDown"
+                value={maxSlowDown}
                 placeholder="1, 2, 3..."
                 onChange={this.handleChange}
               />
-              <label>Max Slow down</label>
+              <label>Max Slow Down</label>
             </div>
           </form>
 
