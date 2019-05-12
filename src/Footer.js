@@ -14,9 +14,10 @@ const Footer = () => {
         <div className="col l4 offset-l2 s12">
           <h4 className="white-text">Links</h4>
           <ul>
-            <li><a className="grey-text text-lighten-3" href="https://github.com/aedificatorum/shouldiautomateit"
-                target="blank">GitHub</a></li>
-            <li><a className="grey-text text-lighten-3" href="https://twitter.com/aedificatorum" target="blank">Twitter</a></li>
+            <a className="grey-text text-lighten-3" href="https://github.com/aedificatorum/shouldiautomateit"
+                target="blank"><i className="fab fa-github small"></i></a>
+            <a className="grey-text text-lighten-3" href="https://twitter.com/aedificatorum" target="blank"><i className="fab fa-twitter small"></i></a>
+            <a className="grey-text text-lighten-3" href="#"><i className="fas fa-envelope small"></i></a>
           </ul>
         </div>
       </div>
@@ -24,7 +25,9 @@ const Footer = () => {
     <div className="footer-copyright black">
       <div className="container">
         <img src="aedificatorum-logo.png" className="logo" alt="logo" />
+        <span className="footer-built-by">
         Built by <a href="https://github.com/aedificatorum">Aedificatorum</a>
+        </span>
       </div>
     </div>
   </footer>
