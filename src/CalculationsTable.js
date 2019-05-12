@@ -23,7 +23,7 @@ const CalculationsTable = ({ table }) => {
                 <td>{row.roiSlow}</td>
                 <td>{row.roiMed}</td>
                 <td>{row.roiFast}</td>
-                <td>{row.shouldIAutomate}</td>
+                <td className={row.shouldIAutomate.toLowerCase()}>{row.shouldIAutomate}</td>
               </tr>
             )
           })}
