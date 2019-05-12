@@ -127,7 +127,6 @@ class App extends Component {
                 type="number"
                 id="automationTime"
                 className="tooltipped"
-                data-position="left"
                 data-tooltip="How long to automate"
                 placeholder="30, 60, 90..."
                 onChange={this.handleChange}
