@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/shouldiautomateit/static/js/runtime~main.e655c175.js"
   },
   {
-    "revision": "c5f254c04d2522a128fe",
-    "url": "/shouldiautomateit/static/js/main.98f065d1.chunk.js"
+    "revision": "553a0d69d0957ab9b132",
+    "url": "/shouldiautomateit/static/js/main.1f3810f2.chunk.js"
   },
   {
     "revision": "29591bf350dfb73bb3a4",
     "url": "/shouldiautomateit/static/js/2.2d69c649.chunk.js"
   },
   {
-    "revision": "c5f254c04d2522a128fe",
-    "url": "/shouldiautomateit/static/css/main.0967ff66.chunk.css"
+    "revision": "553a0d69d0957ab9b132",
+    "url": "/shouldiautomateit/static/css/main.ea7947a4.chunk.css"
   },
   {
     "revision": "29591bf350dfb73bb3a4",
     "url": "/shouldiautomateit/static/css/2.475ec6e2.chunk.css"
   },
   {
-    "revision": "178bd70982b683cb0ade68cfb097ab08",
+    "revision": "1987d1538c92eb152023af6047b56339",
     "url": "/shouldiautomateit/index.html"
   }
 ];
