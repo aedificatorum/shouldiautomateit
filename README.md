@@ -1,6 +1,7 @@
 # Should I automate it?
 
 [Live Demo](https://aedificatorum.github.io/shouldiautomateit/)
+![Screenshot](/screenshot1.png)
 
 :question:
 
