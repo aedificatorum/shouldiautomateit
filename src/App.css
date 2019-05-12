@@ -81,6 +81,6 @@ td.definitely {
   color: green;
 }
 
-.fa-github {
-  margin-right: 5px;
+.fa-github, .fa-twitter {
+  margin-right: 10px;
 }
