@@ -80,3 +80,7 @@ td.probably {
 td.definitely {
   color: green;
 }
+
+.footer-built-by {
+  padding-left: 6px;
+}

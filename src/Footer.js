@@ -24,7 +24,9 @@ const Footer = () => {
     <div className="footer-copyright black">
       <div className="container">
         <img src="aedificatorum-logo.png" className="logo" alt="logo" />
+        <span className="footer-built-by">
         Built by <a href="https://github.com/aedificatorum">Aedificatorum</a>
+        </span>
       </div>
     </div>
   </footer>
