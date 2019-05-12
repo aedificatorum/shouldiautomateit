@@ -10,10 +10,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      frequency: 0,
-      unit: "30",
-      duration: 0,
-      automationTime: 0,
+      frequency: 1,
+      unit: "20",
+      duration: 20,
+      automationTime: 2400,
       calculationsTable: [],
       maxSpeedUp: 0.75,
       maxSlowDown: 2.0,
@@ -90,6 +90,7 @@ class App extends Component {
                 type="number"
                 id="frequency"
                 placeholder="1, 2, 3..."
+                value={frequency}
                 className="tooltipped"
                 data-tooltip="How often you do it"
                 onChange={this.handleChange}
@@ -118,6 +119,7 @@ class App extends Component {
                 className="tooltipped"
                 data-tooltip="Time saved"
                 placeholder="10, 15, 20..."
+                value={duration}
                 onChange={this.handleChange}
               />
               <span>
@@ -131,6 +133,7 @@ class App extends Component {
                 className="tooltipped"
                 data-tooltip="How long to automate"
                 placeholder="30, 60, 90..."
+                value={automationTime}
                 onChange={this.handleChange}
               />
               <span>
