@@ -14,9 +14,10 @@ const Footer = () => {
         <div className="col l4 offset-l2 s12">
           <h4 className="white-text">Links</h4>
           <ul>
-            <li><a className="grey-text text-lighten-3" href="https://github.com/aedificatorum/shouldiautomateit"
-                target="blank">GitHub</a></li>
-            <li><a className="grey-text text-lighten-3" href="https://twitter.com/aedificatorum" target="blank">Twitter</a></li>
+            <a className="grey-text text-lighten-3" href="https://github.com/aedificatorum/shouldiautomateit"
+                target="blank"><i className="fab fa-github small"></i></a>
+            <a className="grey-text text-lighten-3" href="https://twitter.com/aedificatorum" target="blank"><i className="fab fa-twitter small"></i></a>
+            <a className="grey-text text-lighten-3" href="mailto:aedificatorum@outlook.com" target="blank"><i className="fas fa-envelope small"></i></a>
           </ul>
         </div>
       </div>
