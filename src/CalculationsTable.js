@@ -11,7 +11,7 @@ const CalculationsTable = ({ table }) => {
             <th>ROI Slow</th>
             <th>ROI</th>
             <th>ROI Fast</th>
-            <th>Should I automate?</th>
+            <th>Should I Automate It?</th>
           </tr>
         </thead>
         <tbody>
