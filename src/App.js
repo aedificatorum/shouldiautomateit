@@ -119,10 +119,8 @@ class App extends Component {
               <span>
                 {" "}
                 <Pluralize count={duration}>minute</Pluralize> through
-                automation.
+                automation. That automation would take...
               </span>
-
-              <div className="form-label">That automation would take...</div>
               <input
                 type="number"
                 id="automationTime"
