@@ -91,3 +91,7 @@ td.definitely {
 .footer-built-by {
   padding-left: 6px;
 }
+
+.fa-github, .fa-twitter {
+  margin-right: 10px;
+}
