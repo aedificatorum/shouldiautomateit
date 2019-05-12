@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       frequency: 1,
-      unit: "20",
+      unit: 20,
       duration: 20,
       automationTime: 2400,
       calculationsTable: [],
@@ -21,9 +21,9 @@ class App extends Component {
     };
   }
 
-  handleChange = event => {
+  handleChangeNumber = event => {
     this.setState({
-      [event.target.id]: event.target.value
+      [event.target.id]: Number(event.target.value)
     });
   };
 
@@ -39,7 +39,7 @@ class App extends Component {
       maxSpeedUp,
       numberOfMonths
     } = this.state;
-    let numberOfTimesPerMonth = frequency * Number(unit);
+    let numberOfTimesPerMonth = frequency * unit;
 
     let calculationTable = Calculator(
       duration,
@@ -93,7 +93,7 @@ class App extends Component {
                 value={frequency}
                 className="tooltipped"
                 data-tooltip="How often you do it"
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <span>
                 {" "}
@@ -103,7 +103,7 @@ class App extends Component {
                 type="text"
                 id="unit"
                 className="browser-default"
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
                 value={unit}
               >
                 <option value="30">day</option>
@@ -120,7 +120,7 @@ class App extends Component {
                 data-tooltip="Time saved"
                 placeholder="10, 15, 20..."
                 value={duration}
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <span>
                 {" "}
@@ -134,7 +134,7 @@ class App extends Component {
                 data-tooltip="How long to automate"
                 placeholder="30, 60, 90..."
                 value={automationTime}
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <span>
                 {" "}
@@ -145,7 +145,7 @@ class App extends Component {
                 <button
                   className="waves-effect waves-light btn"
                   disabled={isCalculateDisabled}
-                  onClick={this.handleClick}
+                  onClick={this.handleChangeNumber}
                 >
                   Should I automate it?
                 </button>
@@ -161,7 +161,7 @@ class App extends Component {
                 id="numberOfMonths"
                 value={numberOfMonths}
                 placeholder="1, 2, 3..."
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <label>Number Of Months</label>
               <input
@@ -170,7 +170,7 @@ class App extends Component {
                 step="0.1"
                 id="maxSpeedUp"
                 placeholder="0.3, 0.5, 0.7..."
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <label>Max Speed Up</label>
               <input
@@ -178,7 +178,7 @@ class App extends Component {
                 id="maxSlowDown"
                 value={maxSlowDown}
                 placeholder="1, 2, 3..."
-                onChange={this.handleChange}
+                onChange={this.handleChangeNumber}
               />
               <label>Max Slow Down</label>
             </div>
