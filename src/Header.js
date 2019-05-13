@@ -15,6 +15,9 @@ const Header = () => {
           <a href="/" data-target="mobile-nav" className="sidenav-trigger">
             <i className="fas fa-bars" />
           </a>
+          <a href="#!" className="navbar-title">
+            Should I automate it?
+          </a>
           <ul className="right hide-on-med-and-down">
             <li>
               <NavLink to="/help">Help</NavLink>
