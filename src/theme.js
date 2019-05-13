@@ -6,6 +6,6 @@ const themeDark = {
   body: "#000000"
 }
 
-const theme = mode => (mode === "dark" ? themeDark : themeLight)
+const Theme = mode => (mode === "dark" ? themeDark : themeLight)
 
-export default theme;
+export default Theme;
