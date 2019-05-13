@@ -9,11 +9,8 @@ const Header = () => {
           <NavLink to="/" className="navbar-title">
             Should I automate it?
           </NavLink>
-          <a href="/" data-target="mobile-nav" className="sidenav-trigger">
+          <a to="/" data-target="mobile-nav" className="sidenav-trigger">
             <i className="fas fa-bars" />
-          </a>
-          <a href="#!" className="navbar-title">
-            Should I automate it?
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
