@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
+import Help from "./Help"
 
 const Header = () => {
   return (
@@ -34,6 +35,7 @@ const Header = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/help" component={Help} />
         {/* <Route path="*" component={NotFound} /> */}
       </Switch>
     </React.Fragment>
