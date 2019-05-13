@@ -32,8 +32,8 @@ const Header = () => {
       </ul>
 
       <Switch>
-        <Route path="/about" component={About} />
         <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
         {/* <Route path="*" component={NotFound} /> */}
       </Switch>
     </React.Fragment>
