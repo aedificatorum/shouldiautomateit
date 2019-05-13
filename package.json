@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "/shouldiautomateit",
   "dependencies": {
+    "@emotion/core": "^10.0.10",
     "emotion-theming": "^10.0.10",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.8.6",
