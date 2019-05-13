@@ -17,7 +17,7 @@ const Footer = () => {
             <a className="grey-text text-lighten-3" href="https://github.com/aedificatorum/shouldiautomateit"
                 target="blank"><i className="fab fa-github small"></i></a>
             <a className="grey-text text-lighten-3" href="https://twitter.com/aedificatorum" target="blank"><i className="fab fa-twitter small"></i></a>
-            <a className="grey-text text-lighten-3" href="#"><i className="fas fa-envelope small"></i></a>
+            <a className="grey-text text-lighten-3" href="/"><i className="fas fa-envelope small"></i></a>
           </ul>
         </div>
       </div>

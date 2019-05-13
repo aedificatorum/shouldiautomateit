@@ -1,10 +1,17 @@
 import React from "react";
+import { NavLink, Route, Switch } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Help from "./Help"
 
 const Header = () => {
   return (
-    <header>
+    <React.Fragment>
       <nav>
         <div className="nav-wrapper black">
+          <NavLink to="/" className="navbar-title">
+            Should I automate it?
+          </NavLink>
           <a href="/" data-target="mobile-nav" className="sidenav-trigger">
             <i className="fas fa-bars" />
           </a>
@@ -13,20 +20,34 @@ const Header = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
-              <a href="#about">About</a>
+              <NavLink to="/help">Help</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
             </li>
           </ul>
         </div>
       </nav>
+
       <ul className="sidenav" id="mobile-nav">
         <li>
-          <a href="/">Home</a>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <a href="#about">About</a>
+          <NavLink to="/help">Help</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
-    </header>
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/help" component={Help} />
+        {/* <Route path="*" component={NotFound} /> */}
+      </Switch>
+    </React.Fragment>
   );
 };
 
