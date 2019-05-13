@@ -33,13 +33,6 @@ select[type=text] {
   height: auto;
 }
 
-@media only screen and (max-width: 600px) {
-  .logo {
-    width: 3.1%;
-    height: auto;
-  }
-}
-
 .basic-form, .advanced-form {
   border-radius: 5px;
   margin-top: 20px;
@@ -90,4 +83,16 @@ td.definitely {
 
 .fa-github, .fa-twitter {
   margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 3.1%;
+    height: auto;
+  }
+  .navbar-title {
+    padding-left: 5px;
+    font-size: 1.75em;
+  }
 }
