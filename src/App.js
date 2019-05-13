@@ -5,6 +5,7 @@ import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
 import Footer from "./Footer";
 import Header from "./Header";
+import { useTheme } from "./ThemeProvider"
 import "../node_modules/materialize-css/dist/css/materialize.css";
 import "../node_modules/materialize-css/dist/js/materialize.js";
 
@@ -82,10 +83,17 @@ class App extends Component {
       );
     const isCalculateDisabled = !this.canBeSubmitted();
 
+    const themeState = useTheme();
+
     return (
       <React.Fragment>
         <Header />
         <main>
+          <div>
+            <button onClick={() => themeState.toggle()}>
+              {themeState.dark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            </button>
+          </div>
           <div className="container">
             <div className="row">
               <form className="col m6 s12">

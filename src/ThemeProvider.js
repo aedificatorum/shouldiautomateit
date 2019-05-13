@@ -1,8 +1,6 @@
 import React from "react";
 import Theme from './Theme';
 import { ThemeProvider as EmotionThemeProvider } from "emotion-theming"
-import { stringify } from "querystring";
-
 
 const defaultContextData = {
   dark: false,
@@ -48,4 +46,4 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-export { ThemeProvider, useTheme }
+export { ThemeProvider, useTheme };
