@@ -1,5 +1,5 @@
 import React from "react";
-import Theme from './Theme';
+import theme from './theme';
 import { ThemeProvider as EmotionThemeProvider } from "emotion-theming"
 
 const defaultContextData = {
@@ -15,10 +15,12 @@ const useEffectDarkMode = () => {
     dark:false,
     hasThemeMounted: false
   });
+
   React.useEffect(() => {
-    const lsDark = localStorage.getItem("dark") === "true";
-    setThemeState({ ...themeState, dark: lsDark, hasThemeMounted: true })
+    const isDark = localStorage.getItem("dark") === "true";
+    setThemeState({ ...themeState, dark: isDark, hasThemeMounted: true })
   }, []);
+
   return [themeState, setThemeState];
 };
 
@@ -26,7 +28,7 @@ const ThemeProvider = ({ children }) => {
   const [themeState, setThemeState] = useEffectDarkMode();
 
   if (!themeState.hasThemeLoaded) {
-    return <div />;
+    return <div>lol no theme</div>;
   }
 
   const toggle = () => {
@@ -35,7 +37,7 @@ const ThemeProvider = ({ children }) => {
     setThemeState({ ...themeState, dark });
   }
 
-  const computedTheme = themeState.dark ? Theme("dark") : Theme("light");
+  const computedTheme = themeState.dark ? theme("dark") : theme("light");
 
   return (
     <EmotionThemeProvider theme={computedTheme}>

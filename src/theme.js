@@ -1,11 +1,11 @@
 const themeLight = {
-  body: "#FFFFFF"
+  background: "#FF0000"
 }
 
 const themeDark = {
-  body: "#000000"
+  background: "#FF0000"
 }
 
-const Theme = mode => (mode === "dark" ? themeDark : themeLight)
+const theme = mode => (mode === "dark" ? themeDark : themeLight)
 
-export default Theme;
+export default theme;
