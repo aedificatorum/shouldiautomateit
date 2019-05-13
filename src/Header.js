@@ -5,11 +5,11 @@ const Header = () => {
     <header>
       <nav>
         <div className="nav-wrapper black">
-          <a href="#!" className="navbar-title">
-            Should I automate it?
-          </a>
           <a href="/" data-target="mobile-nav" className="sidenav-trigger">
             <i className="fas fa-bars" />
+          </a>
+          <a href="#!" className="navbar-title">
+            Should I automate it?
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
