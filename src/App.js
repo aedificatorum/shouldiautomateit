@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
@@ -12,7 +12,7 @@ import "../node_modules/materialize-css/dist/js/materialize.js";
 class App extends Component {
   render() {
     return (
-      <div>
+      <HashRouter>
         <header>
           <Header />
         </header>
@@ -25,7 +25,7 @@ class App extends Component {
           </Switch>
         </main>
         <Footer />
-      </div>
+      </HashRouter>
     );
   }
 }
