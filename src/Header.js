@@ -17,6 +17,9 @@ const Header = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
+              <NavLink to="/help">Help</NavLink>
+            </li>
+            <li>
               <NavLink to="/about">About</NavLink>
             </li>
           </ul>
@@ -25,7 +28,10 @@ const Header = () => {
 
       <ul className="sidenav" id="mobile-nav">
         <li>
-          <a href="/">Home</a>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/help">Help</NavLink>
         </li>
         <li>
           <NavLink to="/about">About</NavLink>
