@@ -17,9 +17,9 @@ background-color: ${props => props.theme.background};
 color: ${props => props.theme.mainFontColor};
 `;
 
-// const HeaderWrapper = styled("header")`
-// background-color: ${props => props.theme.navbar};
-// `;
+const HeaderWrapper = styled("header")`
+color: ${props => props.theme.navbar};
+`;
 
 const App = () => {
 
@@ -27,12 +27,14 @@ const App = () => {
 
   return (
     <HashRouter>
+      <HeaderWrapper>
       <header>
         
 
         <Header />
  
       </header>
+        </HeaderWrapper>
       <MainWrapper>
         <Switch>
           <Route exact path="/" component={Home} />

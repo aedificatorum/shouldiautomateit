@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <nav>
-        <div className="nav-wrapper blue-grey lighten-2">
+        <div className="nav-wrapper">
           <NavLink to="/" className="navbar-title">
             Should I automate it?
           </NavLink>
