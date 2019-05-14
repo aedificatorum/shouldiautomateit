@@ -3,7 +3,7 @@ import { Switch, Route, HashRouter } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 import styled from "@emotion/styled";
-import { useTheme, ThemeProvider } from "./ThemeContext"
+import { useTheme } from "./ThemeContext"
 import Home from "./Home";
 import About from "./About";
 import Help from "./Help"
@@ -14,7 +14,7 @@ import "../node_modules/materialize-css/dist/js/materialize.js";
 
 const Wtf = styled("main")`
 background-color: ${props => props.theme.background};
-color: #0000FF;
+color: ${props => props.theme.mainFontColor};
 `;
 
 const App = () => {
@@ -22,7 +22,6 @@ const App = () => {
   const themeState = useTheme();
 
   return (
-    <ThemeProvider>
     <HashRouter>
       <header>
         <Header />
@@ -34,10 +33,10 @@ const App = () => {
           <Route path="/help" component={Help} />
           {/* <Route path="*" component={NotFound} /> */}
         </Switch>
+        <button onClick={() => themeState.toggle()} >Make it more (or less) disco</button>
       </Wtf>
       <Footer />
     </HashRouter>
-    </ThemeProvider>
   );
 }
 

@@ -1,9 +1,11 @@
 const themeLight = {
-  background: "#FF0000"
+  background: "#FFFFFF",
+  mainFontColor: "#FF0000"
 }
 
 const themeDark = {
-  background: "#FF0000"
+  background: "#000000",
+  mainFontColor: "#00FF00"
 }
 
 const theme = mode => (mode === "dark" ? themeDark : themeLight)
