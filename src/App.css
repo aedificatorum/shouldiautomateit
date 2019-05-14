@@ -85,6 +85,17 @@ td.definitely {
   margin-right: 10px;
 }
 
+.about-page {
+  font-size: 1.2em;
+}
+
+.about-title {
+  padding-top: 2%;
+}
+
+.about-container {
+  padding: 5% 0 10% 0;
+}
 
 @media only screen and (max-width: 600px) {
   .logo {
@@ -96,3 +107,4 @@ td.definitely {
     font-size: 1.75em;
   }
 }
+
