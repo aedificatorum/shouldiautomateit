@@ -12,7 +12,7 @@ import "../node_modules/materialize-css/dist/css/materialize.css";
 import "../node_modules/materialize-css/dist/js/materialize.js";
 
 
-const Wtf = styled("main")`
+const MainWrapper = styled("main")`
 background-color: ${props => props.theme.background};
 color: ${props => props.theme.mainFontColor};
 `;
@@ -26,7 +26,7 @@ const App = () => {
       <header>
         <Header />
       </header>
-      <Wtf>
+      <MainWrapper>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -34,7 +34,7 @@ const App = () => {
           {/* <Route path="*" component={NotFound} /> */}
         </Switch>
         <button onClick={() => themeState.toggle()} >Make it more (or less) disco</button>
-      </Wtf>
+      </MainWrapper>
       <Footer />
     </HashRouter>
   );
