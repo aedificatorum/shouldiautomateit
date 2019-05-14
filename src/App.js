@@ -17,6 +17,10 @@ background-color: ${props => props.theme.background};
 color: ${props => props.theme.mainFontColor};
 `;
 
+// const HeaderWrapper = styled("header")`
+// background-color: ${props => props.theme.navbar};
+// `;
+
 const App = () => {
 
   const themeState = useTheme();
@@ -24,7 +28,10 @@ const App = () => {
   return (
     <HashRouter>
       <header>
+        
+
         <Header />
+ 
       </header>
       <MainWrapper>
         <Switch>
