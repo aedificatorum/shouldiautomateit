@@ -59,6 +59,8 @@ class Home extends Component {
   };
 
   render() {
+    const url = window.location.href;
+
     const {
       calculationsTable,
       duration,
@@ -195,7 +197,8 @@ class Home extends Component {
 
         <div id="modal1" class="modal">
           <div class="modal-content">
-            <p>URL</p>
+            <h4>Share</h4>
+            <p>{url}</p>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">
