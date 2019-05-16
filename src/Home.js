@@ -140,7 +140,7 @@ class Home extends Component {
 
               <div className="button">
                 <button
-                  className="waves-effect waves-light btn"
+                  className="waves-effect waves-light btn teal lighten-2"
                   disabled={isCalculateDisabled}
                   onClick={this.handleSubmit}
                 >
@@ -190,7 +190,7 @@ class Home extends Component {
           {displayResult}
         </div>
         <a href="#" class="share-button-float">
-          <i class="fas fa-share-alt my-button" />
+          <i class="fas fa-share-alt small my-button" />
         </a>
       </div>
     );

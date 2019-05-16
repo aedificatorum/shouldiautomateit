@@ -12,9 +12,6 @@ main {
   flex: 1 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 .button {
   margin: 25px 0;
@@ -101,9 +98,9 @@ td.definitely {
   position:fixed;
 	width:60px;
 	height:60px;
-	bottom:55px;
+	bottom:80px;
 	right:40px;
-	background-color:#0C9;
+	background-color:#4db6ac;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -111,7 +108,8 @@ td.definitely {
 }
 
 .my-button{
-	margin-top:22px;
+  margin-top:17px;
+  margin-right: 3px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -122,6 +120,15 @@ td.definitely {
   .navbar-title {
     padding-left: 5px;
     font-size: 1.75em;
+  }
+  .share-button-float {
+    bottom:10px;
+    right:10px;
+    width:50px;
+	  height:50px;
+  }
+  .my-button{
+    margin-top:18px;
   }
 }
 
