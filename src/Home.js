@@ -189,6 +189,7 @@ class Home extends Component {
 
             {displayResult}
           </div>
+          <i class="fas fa-share-alt share-button"></i>
         </div>
     );
   }
