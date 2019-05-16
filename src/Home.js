@@ -189,9 +189,20 @@ class Home extends Component {
 
           {displayResult}
         </div>
-        <a href="#" class="share-button-float">
+        <a class="share-button-float  modal-trigger" href="#modal1">
           <i class="fas fa-share-alt small my-button" />
         </a>
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <p>URL</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+              Copy
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
