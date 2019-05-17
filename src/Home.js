@@ -59,6 +59,8 @@ class Home extends Component {
   };
 
   render() {
+    const url = window.location.href;
+
     const {
       calculationsTable,
       duration,
@@ -78,118 +80,133 @@ class Home extends Component {
     const isCalculateDisabled = !this.canBeSubmitted();
 
     return (
-        <div className="container">
-          <div className="row">
-            <form className="col m6 s12">
-              <div className="row blue-grey lighten-5 basic-form">
-                <h5>Basic options</h5>
-                <input
-                  type="number"
-                  id="frequency"
-                  placeholder="1, 2, 3..."
-                  value={frequency}
-                  className="tooltipped"
-                  data-tooltip="How often you do it"
-                  onChange={this.handleChangeNumber}
-                />
-                <span>
-                  {" "}
-                  <Pluralize count={frequency}>time</Pluralize> every{" "}
-                </span>
-                <select
-                  type="text"
-                  id="unit"
-                  className="browser-default"
-                  onChange={this.handleChangeNumber}
-                  value={unit}
+      <div className="container">
+        <div className="row">
+          <form className="col m6 s12">
+            <div className="row blue-grey lighten-5 basic-form">
+              <h5>Basic options</h5>
+              <input
+                type="number"
+                id="frequency"
+                placeholder="1, 2, 3..."
+                value={frequency}
+                className="tooltipped"
+                data-tooltip="How often you do it"
+                onChange={this.handleChangeNumber}
+              />
+              <span>
+                {" "}
+                <Pluralize count={frequency}>time</Pluralize> every{" "}
+              </span>
+              <select
+                type="text"
+                id="unit"
+                className="browser-default"
+                onChange={this.handleChangeNumber}
+                value={unit}
+              >
+                <option value="30">day</option>
+                <option value="20">week day</option>
+                <option value="4">Week</option>
+                <option value="2">Other Week</option>
+                <option value="1">Month</option>
+              </select>
+              <span> I could save </span>
+              <input
+                type="number"
+                id="duration"
+                className="tooltipped"
+                data-tooltip="Time saved"
+                placeholder="10, 15, 20..."
+                value={duration}
+                onChange={this.handleChangeNumber}
+              />
+              <span>
+                {" "}
+                <Pluralize count={duration}>minute</Pluralize> through
+                automation. That automation would take...
+              </span>
+              <input
+                type="number"
+                id="automationTime"
+                className="tooltipped"
+                data-tooltip="How long to automate"
+                placeholder="30, 60, 90..."
+                value={automationTime}
+                onChange={this.handleChangeNumber}
+              />
+              <span>
+                {" "}
+                <Pluralize count={automationTime}>minute</Pluralize>
+              </span>
+
+              <div className="button">
+                <button
+                  className="waves-effect waves-light btn teal lighten-2"
+                  disabled={isCalculateDisabled}
+                  onClick={this.handleSubmit}
                 >
-                  <option value="30">day</option>
-                  <option value="20">week day</option>
-                  <option value="4">Week</option>
-                  <option value="2">Other Week</option>
-                  <option value="1">Month</option>
-                </select>
-                <span> I could save </span>
-                <input
-                  type="number"
-                  id="duration"
-                  className="tooltipped"
-                  data-tooltip="Time saved"
-                  placeholder="10, 15, 20..."
-                  value={duration}
-                  onChange={this.handleChangeNumber}
-                />
-                <span>
-                  {" "}
-                  <Pluralize count={duration}>minute</Pluralize> through
-                  automation. That automation would take...
-                </span>
-                <input
-                  type="number"
-                  id="automationTime"
-                  className="tooltipped"
-                  data-tooltip="How long to automate"
-                  placeholder="30, 60, 90..."
-                  value={automationTime}
-                  onChange={this.handleChangeNumber}
-                />
-                <span>
-                  {" "}
-                  <Pluralize count={automationTime}>minute</Pluralize>
-                </span>
-
-                <div className="button">
-                  <button
-                    className="waves-effect waves-light btn"
-                    disabled={isCalculateDisabled}
-                    onClick={this.handleSubmit}
-                  >
-                    Should I automate it?
-                  </button>
-                </div>
+                  Should I automate it?
+                </button>
               </div>
-            </form>
+            </div>
+          </form>
 
-            <form className="col m5 offset-m1">
-              <div className="row blue-grey lighten-5 advanced-form">
-                <h5>Advanced options</h5>
-                <input
-                  type="number"
-                  id="numberOfMonths"
-                  value={numberOfMonths}
-                  placeholder="1, 2, 3..."
-                  onChange={this.handleChangeNumber}
-                  className="tooltipped"
-                  data-tooltip="How many months to forecast"
-                />
-                <label>Number Of Months</label>
-                <input
-                  type="number"
-                  value={maxSpeedUp}
-                  step="0.1"
-                  id="maxSpeedUp"
-                  placeholder="0.3, 0.5, 0.7..."
-                  onChange={this.handleChangeNumber}
-                  className="tooltipped"
-                  data-tooltip="How much faster the automation could be"
-                />
-                <label>Max Speed Up</label>
-                <input
-                  type="number"
-                  id="maxSlowDown"
-                  value={maxSlowDown}
-                  placeholder="1, 2, 3..."
-                  onChange={this.handleChangeNumber}
-                  className="tooltipped"
-                  data-tooltip="How much slower the automation could be"
-                />
-                <label>Max Slow Down</label>
-              </div>
-            </form>
+          <form className="col m5 offset-m1">
+            <div className="row blue-grey lighten-5 advanced-form">
+              <h5>Advanced options</h5>
+              <input
+                type="number"
+                id="numberOfMonths"
+                value={numberOfMonths}
+                placeholder="1, 2, 3..."
+                onChange={this.handleChangeNumber}
+                className="tooltipped"
+                data-tooltip="How many months to forecast"
+              />
+              <label>Number Of Months</label>
+              <input
+                type="number"
+                value={maxSpeedUp}
+                step="0.1"
+                id="maxSpeedUp"
+                placeholder="0.3, 0.5, 0.7..."
+                onChange={this.handleChangeNumber}
+                className="tooltipped"
+                data-tooltip="How much faster the automation could be"
+              />
+              <label>Max Speed Up</label>
+              <input
+                type="number"
+                id="maxSlowDown"
+                value={maxSlowDown}
+                placeholder="1, 2, 3..."
+                onChange={this.handleChangeNumber}
+                className="tooltipped"
+                data-tooltip="How much slower the automation could be"
+              />
+              <label>Max Slow Down</label>
+            </div>
+          </form>
 
-            {displayResult}
+          {displayResult}
+        </div>
+        <a class="share-button-float  modal-trigger" href="#modal1">
+          <i class="fas fa-share-alt small my-button" />
+        </a>
+
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Share</h4>
+            <p>{url}</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+              Copy
+            </a>
           </div>
         </div>
+      </div>
     );
   }
 }
