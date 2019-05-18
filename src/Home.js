@@ -58,8 +58,29 @@ class Home extends Component {
     return frequency > 0 && unit !== "" && duration > 0 && automationTime > 0;
   };
 
+  getShareUrl = () => {
+    const urlBase = `${window.location.protocol}//${window.location.host}${window.location.pathname}#/`;
+    
+    /* URL Paramaters
+     * f = frequency (times per unit)
+     * u = unit (day, week...)
+     * s = time saved
+     * a = time to automate
+     * Advanced parameters not supported yet!
+    */
+
+    const {
+      duration,
+      automationTime,
+      frequency,
+      unit
+    } = this.state;
+    const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}`;
+    return url;
+  }
+
   render() {
-    const url = window.location.href;
+    const url = this.getShareUrl();
 
     const {
       calculationsTable,
