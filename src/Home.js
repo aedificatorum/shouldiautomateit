@@ -59,25 +59,28 @@ class Home extends Component {
   };
 
   getShareUrl = () => {
-    const urlBase = `${window.location.protocol}//${window.location.host}${window.location.pathname}#/`;
-    
+    const urlBase = `${window.location.protocol}//${window.location.host}${
+      window.location.pathname
+    }#/`;
+
     /* URL Paramaters
      * f = frequency (times per unit)
      * u = unit (day, week...)
      * s = time saved
      * a = time to automate
      * Advanced parameters not supported yet!
-    */
+     */
 
-    const {
-      duration,
-      automationTime,
-      frequency,
-      unit
-    } = this.state;
+    const { duration, automationTime, frequency, unit } = this.state;
     const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}`;
     return url;
-  }
+  };
+
+  shareButtonClick = () => {
+    const shareUrl = document.getElementById("share-url");
+    shareUrl.select();
+    document.execCommand("copy");
+  };
 
   render() {
     const url = this.getShareUrl();
@@ -212,19 +215,22 @@ class Home extends Component {
 
           {displayResult}
         </div>
-        <a class="share-button-float  modal-trigger" href="#modal1">
-          <i class="fas fa-share-alt small my-button" />
+        <a className="share-button-float  modal-trigger" href="#modal1">
+          <i className="fas fa-share-alt small my-button" />
         </a>
 
-        <div id="modal1" class="modal">
-          <div class="modal-content">
+        <div id="modal1" className="modal">
+          <div className="modal-content">
             <h4>Share</h4>
-            <p>{url}</p>
+            <input type="text" id="share-url" value={url} readOnly />
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+          <div className="modal-footer">
+            <button
+              className="waves-effect waves-green btn-flat"
+              onClick={this.shareButtonClick}
+            >
               Copy
-            </a>
+            </button>
           </div>
         </div>
       </div>
