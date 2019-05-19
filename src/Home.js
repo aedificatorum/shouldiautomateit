@@ -14,8 +14,7 @@ class Home extends Component {
       calculationsTable: [],
       maxSpeedUp: 0.75,
       maxSlowDown: 2.0,
-      numberOfMonths: 36,
-      url:''
+      numberOfMonths: 36
     };
   }
 
@@ -60,25 +59,28 @@ class Home extends Component {
   };
 
   getShareUrl = () => {
-    const urlBase = `${window.location.protocol}//${window.location.host}${window.location.pathname}#/`;
-    
+    const urlBase = `${window.location.protocol}//${window.location.host}${
+      window.location.pathname
+    }#/`;
+
     /* URL Paramaters
      * f = frequency (times per unit)
      * u = unit (day, week...)
      * s = time saved
      * a = time to automate
      * Advanced parameters not supported yet!
-    */
+     */
 
-    const {
-      duration,
-      automationTime,
-      frequency,
-      unit
-    } = this.state;
+    const { duration, automationTime, frequency, unit } = this.state;
     const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}`;
     return url;
-  }
+  };
+
+  shareButtonClick = () => {
+    const shareUrl = document.getElementById("share-url");
+    shareUrl.select();
+    document.execCommand("copy");
+  };
 
   render() {
     const url = this.getShareUrl();
@@ -220,12 +222,15 @@ class Home extends Component {
         <div id="modal1" className="modal">
           <div className="modal-content">
             <h4>Share</h4>
-            <p>{url}</p>
+            <input type="text" id="share-url" value={url} readOnly />
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">
-              <button onClick={this.onClick}>Copy</button>
-            </a>
+            <button
+              className="waves-effect waves-green btn-flat"
+              onClick={this.shareButtonClick}
+            >
+              Copy
+            </button>
           </div>
         </div>
       </div>
