@@ -14,7 +14,8 @@ class Home extends Component {
       calculationsTable: [],
       maxSpeedUp: 0.75,
       maxSlowDown: 2.0,
-      numberOfMonths: 36
+      numberOfMonths: 36,
+      url:''
     };
   }
 
@@ -212,18 +213,18 @@ class Home extends Component {
 
           {displayResult}
         </div>
-        <a class="share-button-float  modal-trigger" href="#modal1">
-          <i class="fas fa-share-alt small my-button" />
+        <a className="share-button-float  modal-trigger" href="#modal1">
+          <i className="fas fa-share-alt small my-button" />
         </a>
 
-        <div id="modal1" class="modal">
-          <div class="modal-content">
+        <div id="modal1" className="modal">
+          <div className="modal-content">
             <h4>Share</h4>
             <p>{url}</p>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">
-              Copy
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">
+              <button onClick={this.onClick}>Copy</button>
             </a>
           </div>
         </div>
