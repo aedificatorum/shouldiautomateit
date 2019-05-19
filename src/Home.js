@@ -2,19 +2,27 @@ import React, { Component } from "react";
 import Pluralize from "./Pluralize";
 import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
+import queryString from "query-string";
 
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    const parsed = queryString.parse(props.location.search);
+    const frequency = parsed.f || 1;
+    const unit = parsed.u || 20;
+    const duration = parsed.s || 20;
+    const automationTime = parsed.a || 2400;
+
     this.state = {
-      frequency: 1,
-      unit: 20,
-      duration: 20,
-      automationTime: 2400,
-      calculationsTable: [],
+      frequency,
+      unit,
+      duration,
+      automationTime,
       maxSpeedUp: 0.75,
       maxSlowDown: 2.0,
-      numberOfMonths: 36
+      numberOfMonths: 36,
+      calculationsTable: []
     };
   }
 
