@@ -9,6 +9,8 @@ class Home extends Component {
     super(props);
 
     const parsed = queryString.parse(props.location.search);
+
+    // TODO: Advanced parameters
     const frequency = parsed.f || 1;
     const unit = parsed.u || 20;
     const duration = parsed.s || 20;
@@ -71,13 +73,7 @@ class Home extends Component {
       window.location.pathname
     }#/`;
 
-    /* URL Paramaters
-     * f = frequency (times per unit)
-     * u = unit (day, week...)
-     * s = time saved
-     * a = time to automate
-     * Advanced parameters not supported yet!
-     */
+    // TODO: Advanced parameters
 
     const { duration, automationTime, frequency, unit } = this.state;
     const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}`;
@@ -227,7 +223,7 @@ class Home extends Component {
           <i className="fas fa-share-alt small my-button" />
         </a>
 
-        <div id="modal1" className="modal">
+        <div id="share-modal" className="modal">
           <div className="modal-content">
             <h4>Share</h4>
             <input type="text" id="share-url" value={url} readOnly />
@@ -237,7 +233,7 @@ class Home extends Component {
               className="waves-effect waves-green btn-flat"
               onClick={this.shareButtonClick}
             >
-              Copy
+              Copy to Clipboard
             </button>
           </div>
         </div>
