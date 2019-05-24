@@ -75,8 +75,8 @@ class Home extends Component {
 
     // TODO: Advanced parameters
 
-    const { duration, automationTime, frequency, unit } = this.state;
-    const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}`;
+    const { duration, automationTime, frequency, unit, maxSlowDown, maxSpeedUp, numberOfMonths } = this.state;
+    const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}&msd=${maxSlowDown}&msu=${maxSpeedUp}&m=${numberOfMonths}`;
     return url;
   };
 
