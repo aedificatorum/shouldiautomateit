@@ -15,15 +15,18 @@ class Home extends Component {
     const unit = parsed.u || 20;
     const duration = parsed.s || 20;
     const automationTime = parsed.a || 2400;
+    const maxSlowDown = parsed.msd || 2.0;
+    const maxSpeedUp = parsed.msu || 0.75;
+    const numberOfMonths = parsed.m || 36;
 
     this.state = {
       frequency,
       unit,
       duration,
       automationTime,
-      maxSpeedUp: 0.75,
-      maxSlowDown: 2.0,
-      numberOfMonths: 36,
+      maxSpeedUp,
+      maxSlowDown,
+      numberOfMonths,
       calculationsTable: []
     };
   }
