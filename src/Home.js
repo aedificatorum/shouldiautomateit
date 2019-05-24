@@ -15,15 +15,18 @@ class Home extends Component {
     const unit = parsed.u || 20;
     const duration = parsed.s || 20;
     const automationTime = parsed.a || 2400;
+    const maxSlowDown = parsed.msd || 2.0;
+    const maxSpeedUp = parsed.msu || 0.75;
+    const numberOfMonths = parsed.m || 36;
 
     this.state = {
       frequency,
       unit,
       duration,
       automationTime,
-      maxSpeedUp: 0.75,
-      maxSlowDown: 2.0,
-      numberOfMonths: 36,
+      maxSpeedUp,
+      maxSlowDown,
+      numberOfMonths,
       calculationsTable: []
     };
   }
@@ -75,8 +78,8 @@ class Home extends Component {
 
     // TODO: Advanced parameters
 
-    const { duration, automationTime, frequency, unit } = this.state;
-    const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}`;
+    const { duration, automationTime, frequency, unit, maxSlowDown, maxSpeedUp, numberOfMonths } = this.state;
+    const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}&msd=${maxSlowDown}&msu=${maxSpeedUp}&m=${numberOfMonths}`;
     return url;
   };
 
@@ -223,7 +226,7 @@ class Home extends Component {
           <i className="fas fa-share-alt small my-button" />
         </a>
 
-        <div id="share-modal" className="modal">
+        <div id="modal1" className="modal">
           <div className="modal-content">
             <h4>Share</h4>
             <input type="text" id="share-url" value={url} readOnly />
