@@ -223,7 +223,7 @@ class Home extends Component {
           <i className="fas fa-share-alt small my-button" />
         </a>
 
-        <div id="share-modal" className="modal">
+        <div id="modal1" className="modal">
           <div className="modal-content">
             <h4>Share</h4>
             <input type="text" id="share-url" value={url} readOnly />
