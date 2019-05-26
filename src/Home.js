@@ -79,7 +79,15 @@ class Home extends Component {
 
     // TODO: Advanced parameters
 
-    const { duration, automationTime, frequency, unit, maxSlowDown, maxSpeedUp, numberOfMonths } = this.state;
+    const {
+      duration,
+      automationTime,
+      frequency,
+      unit,
+      maxSlowDown,
+      maxSpeedUp,
+      numberOfMonths
+    } = this.state;
     const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}&msd=${maxSlowDown}&msu=${maxSpeedUp}&m=${numberOfMonths}`;
     return url;
   };
@@ -87,9 +95,9 @@ class Home extends Component {
   shareButtonClick = () => {
     const shareUrl = document.getElementById("share-url");
     shareUrl.select();
-    this.setState ({
+    this.setState({
       copied: true
-    })
+    });
     document.execCommand("copy");
   };
 
@@ -240,7 +248,7 @@ class Home extends Component {
               className="waves-effect waves-green btn-flat"
               onClick={this.shareButtonClick}
             >
-            {this.state.copied ? ('Copied') : ('Copy to Clipboard')}
+              {this.state.copied ? "Copied" : "Copy to Clipboard"}
             </button>
           </div>
         </div>
