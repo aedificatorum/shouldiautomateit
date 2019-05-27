@@ -3,6 +3,8 @@ import Pluralize from "./Pluralize";
 import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
 import queryString from "query-string";
+import { ShareModal, ShareButton } from "./Components/Share";
+
 
 class Home extends Component {
   constructor(props) {
@@ -10,7 +12,6 @@ class Home extends Component {
 
     const parsed = queryString.parse(props.location.search);
 
-    // TODO: Advanced parameters
     const frequency = parsed.f || 1;
     const unit = parsed.u || 20;
     const duration = parsed.s || 20;
@@ -77,8 +78,6 @@ class Home extends Component {
       window.location.pathname
     }#/`;
 
-    // TODO: Advanced parameters
-
     const {
       duration,
       automationTime,
@@ -90,15 +89,6 @@ class Home extends Component {
     } = this.state;
     const url = `${urlBase}?f=${frequency}&u=${unit}&s=${duration}&a=${automationTime}&msd=${maxSlowDown}&msu=${maxSpeedUp}&m=${numberOfMonths}`;
     return url;
-  };
-
-  shareButtonClick = () => {
-    const shareUrl = document.getElementById("share-url");
-    shareUrl.select();
-    this.setState({
-      copied: true
-    });
-    document.execCommand("copy");
   };
 
   render() {
@@ -234,24 +224,10 @@ class Home extends Component {
 
           {displayResult}
         </div>
-        <a className="share-button-float  modal-trigger" href="#modal1">
-          <i className="fas fa-share-alt small my-button" />
-        </a>
 
-        <div id="modal1" className="modal">
-          <div className="modal-content">
-            <h4>Share</h4>
-            <input type="text" id="share-url" value={url} readOnly />
-          </div>
-          <div className="modal-footer">
-            <button
-              className="waves-effect waves-green btn-flat"
-              onClick={this.shareButtonClick}
-            >
-              {this.state.copied ? "Copied" : "Copy to Clipboard"}
-            </button>
-          </div>
-        </div>
+        <ShareModal url={url} id="share-modal"/>
+        <ShareButton id="share-modal"/>
+
       </div>
     );
   }
