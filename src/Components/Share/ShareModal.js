@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const ShareModal = ({ url, id }) => {
   const urlInputId = `${id}-share-url`;
@@ -9,6 +9,10 @@ const ShareModal = ({ url, id }) => {
     shareUrl.select();
     setCopied(true);
     document.execCommand("copy");
+
+    setTimeout(() => {
+      setCopied(false);
+    },3000);
   };
 
   return (
@@ -19,7 +23,7 @@ const ShareModal = ({ url, id }) => {
       </div>
       <div className="modal-footer">
         <button
-          className="waves-effect waves-green btn-flat"
+          className="waves-effect waves-green btn-flat btn teal white-text"
           onClick={shareButtonClick}
         >
           {copied ? "Copied" : "Copy to Clipboard"}
