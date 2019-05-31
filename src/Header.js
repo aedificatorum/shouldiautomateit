@@ -9,7 +9,7 @@ const Header = () => {
           <NavLink to="/" className="navbar-title">
             Should I automate it?
           </NavLink>
-          <a to="/" data-target="mobile-nav" className="sidenav-trigger">
+          <a href="/" data-target="mobile-nav" className="sidenav-trigger">
             <i className="fas fa-bars" />
           </a>
           <ul className="right hide-on-med-and-down">
