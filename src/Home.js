@@ -7,7 +7,6 @@ import { ShareModal, ShareButton } from "./Components/Share";
 import { ai } from "./Components/TelemetryService";
 import { withAITracking } from '@microsoft/applicationinsights-react-js';
 
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +32,11 @@ class Home extends Component {
       copied: false,
       calculationsTable: []
     };
+  }
+
+  componentDidMount() {
+    window.$('.tooltipped').tooltip();
+    window.$('.modal').modal();
   }
 
   handleChangeNumber = event => {
@@ -78,7 +82,7 @@ class Home extends Component {
   getShareUrl = () => {
     const urlBase = `${window.location.protocol}//${window.location.host}${
       window.location.pathname
-    }#/`;
+    }`;
 
     const {
       duration,
