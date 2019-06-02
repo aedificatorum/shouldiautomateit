@@ -13,9 +13,9 @@ const Header = () => {
             <i className="fas fa-bars" />
           </a>
           <ul className="right hide-on-med-and-down">
-            {/* <li>
+            <li>
               <NavLink to="/help">Help</NavLink>
-            </li> */}
+            </li>
             <li>
               <NavLink to="/about">About</NavLink>
             </li>
@@ -27,9 +27,9 @@ const Header = () => {
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
-        {/* <li>
+        <li>
           <NavLink to="/help">Help</NavLink>
-        </li> */}
+        </li>
         <li>
           <NavLink to="/about">About</NavLink>
         </li>
