@@ -4,6 +4,8 @@ import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
 import queryString from "query-string";
 import { ShareModal, ShareButton } from "./Components/Share";
+import { ai } from "./Components/TelemetryService";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
 
 
 class Home extends Component {
@@ -233,4 +235,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withAITracking(ai.reactPlugin, Home);

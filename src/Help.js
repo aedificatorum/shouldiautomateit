@@ -1,4 +1,7 @@
 import React from "react";
+import { ai } from "./Components/TelemetryService";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+
 
 const Help = () => {
   return (
@@ -10,4 +13,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default withAITracking(ai.reactPlugin, Help);
