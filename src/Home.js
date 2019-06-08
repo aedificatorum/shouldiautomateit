@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import Pluralize from "./Pluralize";
 import Calculator from "./Calculator";
 import CalculationsTable from "./CalculationsTable";
+import Summary from "./Summary";
 import queryString from "query-string";
 import { ShareModal, ShareButton } from "./Components/Share";
 import { ai } from "./Components/TelemetryService";
-import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { withAITracking } from "@microsoft/applicationinsights-react-js";
 
 class Home extends Component {
   constructor(props) {
@@ -35,8 +36,8 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    window.$('.tooltipped').tooltip();
-    window.$('.modal').modal();
+    window.$(".tooltipped").tooltip();
+    window.$(".modal").modal();
   }
 
   handleChangeNumber = event => {
@@ -117,6 +118,13 @@ class Home extends Component {
         ""
       );
     const isCalculateDisabled = !this.canBeSubmitted();
+
+    let displaySummary =
+      calculationsTable.length > 1 ? (
+        <Summary calculationsTable={calculationsTable} />
+      ) : (
+        ""
+      );
 
     return (
       <div className="container">
@@ -228,12 +236,12 @@ class Home extends Component {
             </div>
           </form>
 
+          {displaySummary}
           {displayResult}
         </div>
 
-        <ShareModal url={url} id="share-modal"/>
-        <ShareButton id="share-modal"/>
-
+        <ShareModal url={url} id="share-modal" />
+        <ShareButton id="share-modal" />
       </div>
     );
   }
