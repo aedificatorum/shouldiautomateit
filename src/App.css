@@ -112,6 +112,12 @@ td.definitely {
   margin-right: 3px;
 }
 
+.summary {
+  font-size: 1.1em;
+  padding: 30px 0 50px 0;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
   .logo {
     width: 3.1%;
