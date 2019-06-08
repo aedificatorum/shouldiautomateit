@@ -4,7 +4,6 @@ const Summary = ({ calculationsTable }) => {
   console.log(calculationsTable[1]);
   return (
     <div className="row summary">
-      <div className="col">Summary</div>
       <div className="col">
         {calculationsTable[2]
           ? "3 months: " + calculationsTable[2].shouldIAutomate
