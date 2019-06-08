@@ -236,9 +236,9 @@ class Home extends Component {
             </div>
           </form>
 
+        </div>
           {displaySummary}
           {displayResult}
-        </div>
 
         <ShareModal url={url} id="share-modal" />
         <ShareButton id="share-modal" />
