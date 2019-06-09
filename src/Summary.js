@@ -1,7 +1,6 @@
 import React from "react";
 
 const Summary = ({ calculationsTable }) => {
-  console.log(calculationsTable[1]);
   return (
     <div className="row summary">
       <div className="col">
