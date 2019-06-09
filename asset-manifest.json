@@ -1,15 +1,15 @@
 {
-  "main.css": "/shouldiautomateit/static/css/main.60e44a6a.chunk.css",
-  "main.js": "/shouldiautomateit/static/js/main.a4572500.chunk.js",
-  "main.js.map": "/shouldiautomateit/static/js/main.a4572500.chunk.js.map",
+  "main.css": "/shouldiautomateit/static/css/main.6b5ba19f.chunk.css",
+  "main.js": "/shouldiautomateit/static/js/main.e03e1d4b.chunk.js",
+  "main.js.map": "/shouldiautomateit/static/js/main.e03e1d4b.chunk.js.map",
   "runtime~main.js": "/shouldiautomateit/static/js/runtime~main.e655c175.js",
   "runtime~main.js.map": "/shouldiautomateit/static/js/runtime~main.e655c175.js.map",
   "static/css/2.475ec6e2.chunk.css": "/shouldiautomateit/static/css/2.475ec6e2.chunk.css",
-  "static/js/2.dafbb35d.chunk.js": "/shouldiautomateit/static/js/2.dafbb35d.chunk.js",
-  "static/js/2.dafbb35d.chunk.js.map": "/shouldiautomateit/static/js/2.dafbb35d.chunk.js.map",
+  "static/js/2.4b4fe97b.chunk.js": "/shouldiautomateit/static/js/2.4b4fe97b.chunk.js",
+  "static/js/2.4b4fe97b.chunk.js.map": "/shouldiautomateit/static/js/2.4b4fe97b.chunk.js.map",
   "index.html": "/shouldiautomateit/index.html",
-  "precache-manifest.f0f781250275b9059bc6f67be7b672cb.js": "/shouldiautomateit/precache-manifest.f0f781250275b9059bc6f67be7b672cb.js",
+  "precache-manifest.4f208b250fe8e428687eb445df65fe65.js": "/shouldiautomateit/precache-manifest.4f208b250fe8e428687eb445df65fe65.js",
   "service-worker.js": "/shouldiautomateit/service-worker.js",
   "static/css/2.475ec6e2.chunk.css.map": "/shouldiautomateit/static/css/2.475ec6e2.chunk.css.map",
-  "static/css/main.60e44a6a.chunk.css.map": "/shouldiautomateit/static/css/main.60e44a6a.chunk.css.map"
+  "static/css/main.6b5ba19f.chunk.css.map": "/shouldiautomateit/static/css/main.6b5ba19f.chunk.css.map"
 }
