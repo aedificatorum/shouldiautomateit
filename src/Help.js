@@ -28,7 +28,7 @@ const Help = () => {
       <h5>Advanced Options</h5>
       <p>
         By default the tool assumes that the estimate might be potentially twice as long (0.5 - 50%) as
-        it will actually take.  It also assumes that it may be underestimating by up to three times (3.0 - 300%).
+        it will actually take.  It also assumes that it may be underestimating by the same margin (2.0 - 200%).
         If you are more (or less) certain about your estimate adjust these values.
       </p>
       <p>
