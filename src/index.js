@@ -7,7 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 import { ai } from "./Components/TelemetryService";
 import { createBrowserHistory } from "history";
 
-const history = createBrowserHistory({ basename: '' });
+const history = createBrowserHistory({ basename: "/shouldiautomateit" });
 ai.initialize({ history: history });
 
 ReactDOM.render(
