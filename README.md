@@ -43,4 +43,4 @@ git push
 ```
 
 [xkcd 1205]: https://xkcd.com/1205/
-[excel blog post]: https://tjaddison.com/2019/04/30/Should-I-Automate-It
+[excel blog post]: https://tjaddison.com/blog/2019/04/should-i-automate-it/
